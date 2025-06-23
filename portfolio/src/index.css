@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+@theme {
+  /* Palette dark mode */
+  --color-primary: #121212;
+  --color-secondary: #1A1A2E;
+  --color-text: #FAFAFA;
+  --color-accent: #05D9E8;
+  --color-accent-secondary: #FF2A6D;
+}
