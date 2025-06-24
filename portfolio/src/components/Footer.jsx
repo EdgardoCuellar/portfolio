@@ -1,8 +1,7 @@
-// src/components/Footer.jsx
 export default function Footer() {
   return (
-    <footer className="text-center text-sm py-6 bg-gray-100">
-      © {new Date().getFullYear()} Your Name. All rights reserved.
+    <footer className="py-6 text-center text-sm text-text/60">
+      © {new Date().getFullYear()} Edgardo Cuellar Sanchez — Contact for template
     </footer>
   );
 }

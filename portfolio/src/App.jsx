@@ -9,6 +9,7 @@ import AboutSection from './components/AboutSection';
 import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
 import Skills from './components/Skills';
+import LanguagesAndDegrees from './components/LanguagesAndDegrees';
 
 const sections = [
   { id: 'intro', label: 'Intro' },
@@ -47,6 +48,7 @@ export default function App() {
         <IntroSection />
         <ProjectsSection />
         <Skills />
+        <LanguagesAndDegrees />
         <AboutSection />
         <ContactSection />
       </main>
