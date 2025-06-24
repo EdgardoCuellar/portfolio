@@ -8,6 +8,7 @@ import ProjectsSection from './components/ProjectsSection';
 import AboutSection from './components/AboutSection';
 import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
+import Skills from './components/Skills';
 
 const sections = [
   { id: 'intro', label: 'Intro' },
@@ -45,6 +46,7 @@ export default function App() {
       <main className="max-w-5xl mx-auto px-4">
         <IntroSection />
         <ProjectsSection />
+        <Skills />
         <AboutSection />
         <ContactSection />
       </main>

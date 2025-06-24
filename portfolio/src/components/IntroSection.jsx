@@ -1,5 +1,6 @@
 
 import { useEffect, useState } from "react";
+import { FaGithub, FaLinkedin, FaChevronDown } from "react-icons/fa";
 
 const roles = [
   "Software Engineer",
@@ -51,6 +52,39 @@ I was 14. I worked on many personal projects, including Rentizy, a real estate m
 with three teammates. After my master’s, I spent eight months traveling across Latin America while still
 contributing to the project. I decided to leave it in January to fully enjoy the rest of my trip.
       </p>
+
+    <div className="flex items-center gap-4 mt-8">
+      <a
+        href="https://github.com/EdgardoCuellar"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-accent text-2xl hover:scale-110 transition-transform duration-200"
+        aria-label="GitHub"
+      >
+        <FaGithub />
+      </a>
+      <a
+        href="/resume.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="relative px-6 py-2 border-2 border-accent text-accent font-semibold rounded overflow-hidden group transition-colors duration-300"
+      >
+        <span className="absolute inset-0 left-0 w-0 bg-accent transition-all duration-300 group-hover:w-full z-0"></span>
+        <span className="relative z-10 group-hover:text-white transition-colors duration-300">Resume</span>
+      </a>
+      <a
+        href="https://www.linkedin.com/in/edgardo-cuellar-sanchez/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-accent text-2xl hover:scale-110 transition-transform duration-200"
+        aria-label="LinkedIn"
+      >
+        <FaLinkedin />
+      </a>
+    </div>
+    <div className="absolute bottom-6 left-1/2 -translate-x-1/2 text-accent animate-bounce">
+      <FaChevronDown size={28} />
+    </div>
     </section>
   );
 }
