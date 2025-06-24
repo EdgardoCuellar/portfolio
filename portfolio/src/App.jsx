@@ -10,10 +10,12 @@ import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
 import Skills from './components/Skills';
 import LanguagesAndDegrees from './components/LanguagesAndDegrees';
+import StarsBackground from './components/StarsBackground';
 
 const sections = [
-  { id: 'intro', label: 'Intro' },
+  { id: 'intro', label: 'Home' },
   { id: 'projects', label: 'Projects' },
+  { id: 'skills', label: 'Skills' },
   { id: 'about', label: 'About Me' },
   { id: 'contact', label: 'Contact' },
 ];
@@ -38,13 +40,18 @@ export default function App() {
 
   return (
     <div className="font-sans text-text bg-primary">
+      
+      <StarsBackground />
+      
       <header className="w-full top-0 left-0 z-10">
         <Navbar sections={sections} scrollTo={scrollTo} />
       </header>
 
+
       {showScrollTop && <ScrollToTopButton scrollTo={scrollTo} />}
 
       <main className="max-w-5xl mx-auto px-4">
+
         <IntroSection />
         <ProjectsSection />
         <Skills />

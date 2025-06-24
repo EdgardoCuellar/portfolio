@@ -38,7 +38,7 @@ const typeColors = {
 
 export default function Skills() {
   return (
-    <section id="skills" className="py-8 px-6 max-w-6xl mx-auto">
+    <section id="skills" className="py-8 px-6 max-w-6xl mx-auto mt-4">
       <h2 className="text-3xl font-bold text-center text-text mb-12">Skills</h2>
       <div className="flex flex-wrap gap-3 justify-center">
         {skills.map((skill, idx) => (

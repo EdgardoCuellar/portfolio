@@ -8,3 +8,8 @@
   --color-accent: #05D9E8;
   --color-accent-secondary: #FF2A6D;
 }
+
+/* Pour le canvas des étoiles */
+canvas {
+  display: block;
+}

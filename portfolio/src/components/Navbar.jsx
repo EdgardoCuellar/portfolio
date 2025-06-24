@@ -1,7 +1,7 @@
 // src/components/Navbar.jsx
 export default function Navbar({ sections, scrollTo }) {
   return (
-    <nav className="w-full py-4 flex justify-center sticky top-0 bg-primary z-50">
+    <nav className="w-full py-4 flex justify-center sticky top-0 z-50">
       <ul className="flex space-x-6 text-m font-bold">
         {sections.map(({ id, label }) => (
           <li key={id}>
