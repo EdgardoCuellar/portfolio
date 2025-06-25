@@ -64,7 +64,7 @@ contributing to the project. I decided to leave it in January to fully enjoy the
         <FaGithub />
       </a>
       <a
-        href="/resume.pdf"
+        href="/CV_2025_EN_Edgardo_Cuellar Sanchez.pdf"
         target="_blank"
         rel="noopener noreferrer"
         className="relative px-6 py-2 border-2 border-accent text-accent font-semibold rounded overflow-hidden group transition-colors duration-300"
