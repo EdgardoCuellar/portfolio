@@ -21,10 +21,10 @@ export default function AboutSection() {
 
         {/* Text section */}
         <div className="w-full md:w-2/3 text-text space-y-4">
-          <p className="leading-relaxed">
-            Passionate about building smart digital solutions, creating clean and useful visual interfaces,
-            and discovering the world one meal and one hike at a time. I enjoy crafting things that are both
-            functional and beautiful — whether it's a line of code, a poster, or a good recipe.
+            <p className="leading-relaxed">
+                <p>Hey it's me Edgardo, I'm a pretty chill guy who doesn't sweat the small stuff. I love jumping into new projects, whether by myself or with others, usually figuring things out as I go. When I find some free time, I enjoy coding random little things, mostly fun stuff for me or my friends. I got into visual design through making memes, which eventually led to helping non-profits and designing my own project websites.</p>
+                <p>Travel is another passion, the real backpacking kind, far from five-star hotels. I'm just back from an 8-month trip through Latin America, hitting 14 countries with almost no flights involved. Oh, also I really like cooking too, mainly because, well, I really like eating.
+            </p>
           </p>
           <div className="flex flex-wrap gap-4 pt-2">
             <span className="flex items-center gap-2 text-sm font-semibold text-accent">
