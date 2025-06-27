@@ -13,7 +13,6 @@ import LanguagesAndDegrees from './components/LanguagesAndDegrees';
 import StarsBackground from './components/StarsBackground';
 
 const sections = [
-  { id: 'intro', label: 'Home' },
   { id: 'projects', label: 'Projects' },
   { id: 'skills', label: 'Skills' },
   { id: 'about', label: 'About Me' },
@@ -42,7 +41,7 @@ export default function App() {
     <div className="font-sans text-text bg-primary">
       
       <StarsBackground />
-      
+
       <header className="w-full top-0 left-0 z-10">
         <Navbar sections={sections} scrollTo={scrollTo} />
       </header>

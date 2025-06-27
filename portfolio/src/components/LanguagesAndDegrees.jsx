@@ -4,7 +4,7 @@ export default function LanguagesAndDegrees() {
   const languages = [
     { name: 'French', level: 'C2', color: 'border-accent text-accent' },
     { name: 'Spanish', level: 'C1', color: 'border-red-500 text-red-500' },
-    { name: 'English', level: 'B2', color: 'border-yellow-500 text-yellow-500' },
+    { name: 'English', level: 'C1', color: 'border-yellow-500 text-yellow-500' },
     { name: 'Dutch', level: 'A2', color: 'border-green-500 text-green-500' },
   ];
 
