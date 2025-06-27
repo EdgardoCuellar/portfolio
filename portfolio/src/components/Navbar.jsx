@@ -1,4 +1,3 @@
-// src/components/Navbar.jsx
 export default function Navbar({ sections, scrollTo }) {
   return (
     <nav className="w-full py-4 flex justify-center sticky top-0 z-50">
