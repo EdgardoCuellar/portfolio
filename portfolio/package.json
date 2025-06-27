@@ -2,6 +2,7 @@
   "name": "portfolio",
   "private": true,
   "version": "0.0.0",
+  "homepage": "https://edgardocuellar.github.io/cv_website/",
   "type": "module",
   "scripts": {
     "dev": "vite",
