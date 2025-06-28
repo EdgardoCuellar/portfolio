@@ -2,7 +2,8 @@
   "name": "portfolio",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://edgardocuellar.github.io/portfolio/",
+  "homepage": "https://edgardo-cuellar.tech",
+  "description": "Edgardo Cuellar Sanchez super cool Portfolio",
   "type": "module",
   "scripts": {
     "dev": "vite",
