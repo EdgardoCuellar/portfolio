@@ -218,13 +218,12 @@ Unfortunately, I lost all the original files, and only a short video remains, a 
   details: {
     text: `A bunch of small personal or experimental projects I've built along the way:
 
-- An AI chatbot using ChatGPT fine-tuned to mimic how my friends talk.
-- A fractal explorer to zoom deep into Julia and Mandelbrot sets.
+- An AI chatbot using ChatGPT fine tuned to mimic my friends messages.
+- A fractal explorer to zoom deep into fractals sets.
 - Pathfinding algorithms for maze solving and shortest path demo.
 - A simplified real-time simulation of the solar system.
-- An image matching algorithm to stitch photos into slideshows.
-- A colorful implementation of Conway’s Game of Life.
-- A mystery scavenger hunt website I built for my girlfriend across Brussels.
+- An image matching algorithm to stitch photos into a big panorama.
+- An implementation of Conway’s Game of Life.
 - And many more unfinished prototypes, weekend hacks, or curiosities...
 
 Sometimes the smallest projects are the most fun.`,
