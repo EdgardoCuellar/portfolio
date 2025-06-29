@@ -62,7 +62,7 @@ export default function IntroSection() {
         <FaGithub />
       </a>
       <a
-        href="/portfolio/CV_2025_EN_Edgardo_Cuellar.pdf"
+        href="CV_2025_EN_Edgardo_Cuellar.pdf"
         target="_blank"
         rel="noopener noreferrer"
         className="relative px-6 py-2 border-2 border-accent text-accent font-semibold rounded overflow-hidden group transition-colors duration-300"
