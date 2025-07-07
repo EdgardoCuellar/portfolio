@@ -25,6 +25,8 @@ const skills = [
     { name: "Ilustrator", type: "design" },
     { name: "GitHub", type: "programming" },
     { name: "Docker", type: "programming" },
+    { name: "Linux", type: "programming" },
+    { name: "Bash", type: "programming" },
 ];
 
 const typeColors = {
