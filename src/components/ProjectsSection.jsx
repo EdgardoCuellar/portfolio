@@ -39,7 +39,7 @@ All UI/UX design was done by me, primarily using Photoshop. I also managed outre
       link: "https://github.com/EdgardoCuellar/ShareHub"
     }
   },
-    {
+  {
     title: "Communcation manager ESN ULB Brussels",
     date: "2023 - 2024",
     description: "Lead communications for an international student organization with 4K+ followers.",
@@ -47,11 +47,30 @@ All UI/UX design was done by me, primarily using Photoshop. I also managed outre
     tools: ["Photoshop", "Illustrator", "Canva", "Social Media", "Project Management"],
     details: {
       text: `\
-Between December 2023 and December 2024, I was Communication Manager for ESN ULB Brussels, a student association organizing weekly events for international students and young professionals.
-I managed our Instagram account (then ~3500 followers), produced visual assets (posters, stories, stickers), and coordinated communication campaigns using tools like Photoshop, Canva, and Illustrator.
-I also led a team expansion by recruiting two collaborators halfway through, helping us and improve efficiency. This experience gave me hands-on exposure to team management, project coordination, conflict resolution, and event promotion, with our team of 14 core members and 60 volunteers.`,
+As part of my student association (ESN), we needed a way to organize secure and anonymous internal votes. Most existing platforms were either paid or lacked transparency, so I decided to build our own.
+
+ESN Vote System is a lightweight, open-source voting platform using public/private key encryption to ensure anonymity and vote integrity. Admins can easily open or close a vote, distribute unique keys, and display results dynamically through a live chart. Each key is tied to a single vote, making multiple submissions impossible.
+
+This project was a way for me to apply what I had just learned in a cryptography course, and to prove that with a bit of code, we can replace overpriced services with simple, secure, and transparent tools.`,
       image: esnImg,
       link: "https://www.instagram.com/esnulbbrussels/"
+    }
+  },
+  {
+    title: "ESN Vote System",
+    date: "2024",
+    description: "Built a secure and anonymous voting system for my student association using cryptography.",
+    icon: "🗳️",
+    tools: ["Django", "Javascript", "Crypto", "Docker", "Matplotlib", "HTML", "CSS"],
+    details: {
+      text: `\
+  As Communication Manager at ESN ULB Brussels, I noticed the lack of free and reliable voting tools for our internal decisions. Most platforms were paid, so I decided to build our own system — simple, secure, and anonymous.
+
+  ESN Vote System uses public/private key cryptography to ensure that each member can vote only once and that all votes remain anonymous. Keys are distributed in advance, and results are dynamically displayed using graphs. Admins can open or close voting sessions, verify key validity, and manage everything through a lightweight interface.
+
+  This project was also an opportunity to apply concepts from a cryptography course I had recently completed and to create something directly useful for the community.`,
+      image: null,
+      link: "https://github.com/EdgardoCuellar/esn_vote_system"
     }
   },
     {
