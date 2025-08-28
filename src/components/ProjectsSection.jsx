@@ -20,8 +20,7 @@ export const projects = [
 JobSeeker automates the job search process by scraping offers from Actiris and LinkedIn, then analyzing them with a local LLM via LM Studio. It filters offers based on user context (location, experience, contract type, etc.), justifies each decision, and tracks applications in dashboards and CSV/JSON files.
 
 The Actiris workflow scrapes offer URLs and analyzes them for relevance, while the LinkedIn workflow monitors clicked offers and instantly analyzes them. All relevant offers are saved for review, and a dashboard helps visualize and track your job search.
-
-This project streamlines job hunting for devs, making it easier to filter, justify, and track applications. Now, HR creates job postings using AI, the AI reads them, and an HR AI analyzes them. 🤡🤡🤡`,
+`,
       image: "https://i.ibb.co/KPWwm84/Linkedin-dashboard.jpg",
       link: "https://github.com/EdgardoCuellar/JobSeeker"
     }
