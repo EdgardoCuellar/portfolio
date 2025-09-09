@@ -12,6 +12,8 @@ import Skills from './components/Skills';
 import LanguagesAndDegrees from './components/LanguagesAndDegrees';
 import StarsBackground from './components/StarsBackground';
 
+import JobFairWidget from './components/jobfair_widget.jsx';
+
 const sections = [
   { id: 'projects', label: 'Projects' },
   { id: 'skills', label: 'Skills' },
@@ -52,6 +54,7 @@ export default function App() {
       <main className="max-w-5xl mx-auto px-4">
 
         <IntroSection />
+        <JobFairWidget apiUrl="http://localhost:1234/v1" apiKey="JUDO1205" />
         <ProjectsSection />
         <Skills />
         <LanguagesAndDegrees />
