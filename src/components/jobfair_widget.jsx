@@ -58,6 +58,18 @@ export default function JobFairWidget({ apiUrl, apiKey }) {
             {loading ? "Thinking..." : "Ask"}
           </button>
 
+          <button
+            onClick={() => {
+              setQ("");
+              setAns("");
+              setSources([]);
+              setError("");
+            }}
+            className="px-4 py-2 border border-gray-600 rounded text-sm hover:bg-gray-800 transition"
+          >
+            Clear
+          </button>
+
 
         </div>
 
@@ -69,7 +81,6 @@ export default function JobFairWidget({ apiUrl, apiKey }) {
 
         {ans && (
           <div className="mt-5 bg-gray-800 p-4 rounded-md">
-            <div className="text-sm font-semibold text-gray-300 mb-2">Answer</div>
             <pre className="whitespace-pre-wrap text-sm text-gray-100">{ans}</pre>
           </div>
         )}
