@@ -15,6 +15,7 @@ export default function JobFairWidget({ apiUrl, apiKey }) {
     try {
       const res = await fetch(`${apiUrl}/qa`, {
         method: "POST",
+        mode: "cors",
         headers: {
           "Content-Type": "application/json",
           "x-api-key": apiKey,

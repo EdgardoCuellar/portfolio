@@ -26,7 +26,13 @@ MODEL_NAME = os.getenv("MODEL_NAME", "qwen/qwen3-4b-2507")
 
 # ---------- Flask app ----------
 app = Flask(__name__)
-CORS(app)
+
+CORS(app,
+     resources={r"/*": {"origins": "*"}},
+     supports_credentials=True,
+     allow_headers=["Content-Type", "x-api-key"],
+     methods=["GET", "POST", "OPTIONS"])
+
 API_TOKEN = os.getenv("API_TOKEN", "JUDO1205")
 
 with open("prompts/analysis_system.txt", "r", encoding="utf-8") as f:
