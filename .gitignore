@@ -8,6 +8,7 @@ pnpm-debug.log*
 lerna-debug.log*
 
 LLM_Bot_Me/corpus
+LLM_Bot_Me/chroma_db
 
 node_modules
 dist
