@@ -37,68 +37,46 @@ export default function JobFairWidget({ apiUrl, apiKey }) {
   }
 
   return (
-    <div className="max-w-xl w-full p-6 bg-secondary border border-gray-700 rounded-lg shadow-lg text-text">
-      <h4 className="text-xl font-bold mb-3 text-accent">Ask about my portfolio</h4>
+    <div className="w-full min-h-[300px] flex flex-col items-center justify-center gap-4">
+      <div className="max-w-xl w-full p-6 bg-secondary rounded-lg text-text">
+        <h4 className="text-xl font-bold mb-3 text-accent">Any question about me ? (EN/FR)</h4>
 
-      <textarea
-        value={q}
-        onChange={(e) => setQ(e.target.value)}
-        rows={3}
-        placeholder="Type your question here..."
-        className="w-full p-3 border rounded-md bg-gray-900 text-gray-100 focus:outline-none focus:ring-2 focus:ring-accent"
-      />
+        <textarea
+          value={q}
+          onChange={(e) => setQ(e.target.value)}
+          rows={3}
+          placeholder="Type your question here..."
+          className="w-full p-3 rounded-md bg-primary text-gray-100 focus:outline-none focus:ring-2 focus:ring-accent"
+        />
 
-      <div className="flex items-center gap-3 mt-3">
-        <button
-          onClick={send}
-          disabled={loading || !q}
-          className="px-5 py-2 bg-accent text-white font-semibold rounded hover:bg-accent-secondary transition disabled:opacity-50"
-        >
-          {loading ? "Thinking..." : "Ask"}
-        </button>
+        <div className="w-full flex items-center gap-3 mt-3 justify-center">
+          <button
+            onClick={send}
+            disabled={loading || !q}
+            className="px-5 py-2 bg-accent text-white font-semibold rounded hover:bg-accent-secondary transition"
+          >
+            {loading ? "Thinking..." : "Ask"}
+          </button>
 
-        <button
-          onClick={() => {
-            setQ("");
-            setAns("");
-            setSources([]);
-            setError("");
-          }}
-          className="px-4 py-2 border border-gray-600 rounded text-sm hover:bg-gray-800 transition"
-        >
-          Clear
-        </button>
-      </div>
 
-      {error && (
-        <div className="mt-3 text-sm text-red-500 font-medium">
-          ⚠️ {error}
         </div>
-      )}
 
-      {ans && (
-        <div className="mt-5 bg-gray-800 p-4 rounded-md">
-          <div className="text-sm font-semibold text-gray-300 mb-2">Answer</div>
-          <pre className="whitespace-pre-wrap text-sm text-gray-100">{ans}</pre>
+        {error && (
+          <div className="mt-3 text-sm text-red-500 font-medium">
+            ⚠️ {error}
+          </div>
+        )}
+
+        {ans && (
+          <div className="mt-5 bg-gray-800 p-4 rounded-md">
+            <div className="text-sm font-semibold text-gray-300 mb-2">Answer</div>
+            <pre className="whitespace-pre-wrap text-sm text-gray-100">{ans}</pre>
+          </div>
+        )}
+
+        <div className="mt-3 text-xs text-gray-500">
+          Run on a local LLM "liquid/lfm2-1.2b" via LMstudio + ChromaDB instance.
         </div>
-      )}
-
-      {sources && sources.length > 0 && (
-        <div className="mt-4 bg-gray-900 p-3 rounded-md">
-          <div className="text-sm font-semibold text-gray-300 mb-2">Sources</div>
-          <ul className="text-xs list-disc list-inside text-gray-400">
-            {sources.map((s, i) => (
-              <li key={i}>
-                <strong className="text-accent">{s.source}</strong>:{" "}
-                <span>{s.chunk.slice(0, 150)}{s.chunk.length > 150 ? "…" : ""}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
-
-      <div className="mt-3 text-xs text-gray-500">
-        ⚡ Powered by my local AI (LM Studio)
       </div>
     </div>
   );
