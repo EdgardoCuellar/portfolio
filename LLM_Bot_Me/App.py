@@ -22,7 +22,7 @@ embed = SentenceTransformer(EMBED_MODEL)
 
 # ---------- LM Studio client (OpenAI-compatible) ----------
 llm = OpenAI(base_url="http://127.0.0.1:1234/v1", api_key="lm-studio")
-MODEL_NAME = os.getenv("MODEL_NAME", "qwen/qwen3-4b-2507")
+MODEL_NAME = os.getenv("MODEL_NAME", "liquid/lfm2-1.2b")
 
 # ---------- Flask app ----------
 app = Flask(__name__)
