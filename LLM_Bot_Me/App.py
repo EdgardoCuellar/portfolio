@@ -64,6 +64,66 @@ SYSTEM_INSTRUCTIONS = (
     "7) Speak in first person for personal facts (e.g., 'I built...','I used...').\n"
 )
 
+keyword_groups = [
+    # Langues et compétences linguistiques
+    ['langues', 'langue', 'parles', 'parle', 'français', 'francais', 'anglais', 
+     'espagnol', 'neerlandais', 'trilingue', 'bilingue', 'niveau', 'c1', 'b1',
+     'maternelle', 'maternelles', 'expression', 'comprehension'],
+    
+    # Compétences techniques et technologies
+    ['java', 'python', 'c++', 'c#', 'javascript', 'php', 'sql', 'html', 'css',
+     'django', 'react', 'tailwind', 'node.js', 'flutter', 'pytorch', 'spark',
+     'docker', 'azure', 'github', 'postgresql', 'mongodb', 'nosql', 'bash',
+     'linux', 'uml', 'agile', 'scrum', 'ci/cd', 'git', 'figma', 'photoshop'],
+    
+    # Projets et expériences
+    ['rentizy', 'sharehub', 'autochef', 'projet', 'projets', 'startup', 'memoire',
+     'developpe', 'developpement', 'application', 'web', 'desktop', 'plateforme',
+     'gestion', 'locative', 'contrats', 'maintenance', 'recherche', 'fullstack',
+     'backend', 'frontend', 'cofondateur', 'cofounder', 'digital nomad'],
+    
+    # Formation et éducation
+    ['diplome', 'diplôme', 'master', 'ulb', 'université', 'promo', 'formation',
+     'cours', 'académique', 'academique', 'mémoire', 'memoire', 'octobre', '2024'],
+    
+    # Voyage et expériences personnelles
+    ['voyage', 'amerique latine', 'amérique latine', 'backpack', 'sac à dos',
+     'pays', 'salvador', 'bruxelles', 'montreal', '8 mois', '13 pays', '14 pays',
+     'digital nomad', 'nomade', 'aventure', 'rencontres', 'paysages'],
+    
+    # Qualités personnelles et compétences soft
+    ['qualites', 'qualités', 'defauts', 'défauts', 'debrouillard', 'créatif',
+     'creative', 'meticuleux', 'pragmatique', 'positif', 'sociable', 'marrant',
+     'intelligence emotionnelle', 'émotionnelle', 'orthographe', 'express',
+     'sentiments', 'confiance', 'sûr de soi', 'sur de soi'],
+    
+    # Recherche d'emploi et préférences
+    ['poste', 'emploi', 'travail', 'software engineer', 'analyste fonctionnel',
+     'devops', 'data scientist', 'hybride', 'présentiel', 'remote', 'bureau',
+     'contact humain', 'équipe', 'equipe', 'collègues', 'collegues', 'permis',
+     'logement', 'appartement', 'déplacements', 'deplacements'],
+    
+    # Méthodologies et processus
+    ['test', 'tests', 'unitaire', 'integration', 'robustesse', 'refactoring',
+     'refactoring', 'code', 'maintenance', 'documentation', 'verification',
+     'ci', 'cd', 'pipeline', 'livraison', 'continue', 'automatisation',
+     'script', 'scripts', 'linux', 'bash'],
+    
+    # Valeurs personnelles
+    ['valeurs', 'inclusif', 'respectueux', 'égalité', 'egalite', 'discriminations',
+     'inclusion', 'minorites', 'minorités', 'genres', 'diversité', 'diversite',
+     'environnement', 'respect', 'droits', 'lutte'],
+    
+    # Âge et situation personnelle
+    ['âge', 'age', '24 ans', '25 ans', 'octobre', 'copine', 'girlfriend', 'amis',
+     'bruxelles', 'vivre', 'habite', 'installer', 'épano', 'epano', 'vie personnelle'],
+    
+    # Centres d'intérêt et hobbies
+    ['cuisine', 'manger', 'jeux vidéo', 'jeux videos', 'animes', 'youtube',
+     'musées', 'musees', 'art contemporain', 'projets perso', 'passions',
+     'hobbies', 'loisirs', 'temps libre', 'coder', 'design', 'memes', 'voyager']
+]
+
 # ---------- Utilities ----------
 def distance_to_similarity(dist):
     if dist is None:
@@ -162,13 +222,24 @@ def retrieve_for_query(q: str, k: int = 60):
         priority = meta.get("priority", 1.0) if isinstance(meta, dict) else 1.0
         sim = distance_to_similarity(dist)
         
-        # Ajouter un bonus pour les correspondances exactes de mots-clés
         bonus = 0.0
-        query_words = set(q.lower().split())
-        doc_words = set(doc.lower().split())
-        matching_words = query_words.intersection(doc_words)
-        if matching_words:
-            bonus = 0.1 * len(matching_words)  # Bonus de 0.1 par mot correspondant
+        query_lower = q.lower()
+        doc_lower = doc.lower()
+
+        # Bonus pour les groupes de mots-clés sémantiques
+        for group in keyword_groups:
+            query_has_keyword = any(keyword in query_lower for keyword in group)
+            doc_has_keyword = any(keyword in doc_lower for keyword in group)
+            
+            if query_has_keyword and doc_has_keyword:
+                # Bonus proportionnel au nombre de correspondances
+                matching_keywords = sum(1 for keyword in group if keyword in query_lower and keyword in doc_lower)
+                bonus += 0.1 * matching_keywords  # 0.1 par mot-clé correspondant
+
+        # Bonus supplémentaire pour les correspondances exactes de phrases courtes
+        if len(q.split()) <= 4:  # Pour les questions courtes
+            if q.lower() in doc_lower:
+                bonus += 0.5  # Gros bonus pour les correspondances exactes
         
         boosted = sim * float(priority) + bonus
         
@@ -178,7 +249,8 @@ def retrieve_for_query(q: str, k: int = 60):
             "dist": dist,
             "sim": sim,
             "priority": float(priority),
-            "boosted_sim": boosted
+            "boosted_sim": boosted,
+            "bonus": bonus  # Pour le débogage
         })
     
     return items

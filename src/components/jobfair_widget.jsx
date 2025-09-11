@@ -46,7 +46,7 @@ export default function JobFairWidget({ apiUrl, apiKey }) {
           value={q}
           onChange={(e) => setQ(e.target.value)}
           rows={3}
-          placeholder="Type your question here..."
+          placeholder="Type your question here... | Ecrivez votre question ici..."
           className="w-full p-3 rounded-md bg-primary text-gray-100 focus:outline-none focus:ring-2 focus:ring-accent"
         />
 
@@ -56,7 +56,7 @@ export default function JobFairWidget({ apiUrl, apiKey }) {
             disabled={loading || !q}
             className="px-5 py-2 bg-accent text-white font-semibold rounded hover:bg-accent-secondary transition"
           >
-            {loading ? "Thinking..." : "Ask"}
+            {loading ? "Thinking...(5-10s)" : "Ask"}
           </button>
 
           <button
@@ -87,7 +87,7 @@ export default function JobFairWidget({ apiUrl, apiKey }) {
         )}
 
         <div className="mt-3 text-xs text-gray-500">
-          Run on a local LLM "liquid/lfm2-1.2b" via LMstudio + ChromaDB instance using "google/embeddinggemma-300m".
+          Run on a local LLM "qwen3-4b-2507" via LMstudio + ChromaDB instance using "google/embeddinggemma-300m".
         </div>
       </div>
     </div>
