@@ -87,7 +87,7 @@ export default function JobFairWidget({ apiUrl, apiKey }) {
         )}
 
         <div className="mt-3 text-xs text-gray-500">
-          Run on a local LLM "liquid/lfm2-1.2b" via LMstudio + ChromaDB instance.
+          Run on a local LLM "liquid/lfm2-1.2b" via LMstudio + ChromaDB instance using "google/embeddinggemma-300m".
         </div>
       </div>
     </div>
