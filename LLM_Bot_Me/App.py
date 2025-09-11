@@ -9,12 +9,13 @@ import re
 import time
 import html
 from typing import List, Dict
+import unicodedata
 
 # ---------- Config ----------
 CHROMA_DIR = "./chroma_db"
 COL_NAME = "portfolio"
 EMBED_MODEL = "google/embeddinggemma-300m"
-MODEL_NAME = os.getenv("MODEL_NAME", "qwen/qwen3-1.7b")
+MODEL_NAME = os.getenv("MODEL_NAME", "qwen/qwen3-4b-2507")
 LMSTUDIO_URL = os.getenv("LMSTUDIO_URL", "http://127.0.0.1:1234/v1")
 API_TOKEN = os.getenv("API_TOKEN", "JUDO1205")
 
@@ -54,7 +55,7 @@ SYSTEM_INSTRUCTIONS = (
     "You are an assistant that answers questions using ONLY the provided CONTEXT chunks.\n"
     "RULES (strict):\n"
     "1) Detect the user's language and answer in that language. If detection fails, default to French.\n"
-    "2) Be concise: 2–5 sentences for factual answers. Optionally add: 'Do you want more details?'.\n"
+    "2) Be concise: 2–5 sentences for factual answers.\n"
     "3) Do NOT mention, print or list any sources, filenames, or indices in the answer.\n"
     "4) Use ONLY information present in the provided CONTEXT. If the answer cannot be found in the context, reply exactly:\n"
     "\"I don't know based on my documents — please check the portfolio or ask me directly.\"\n"
@@ -71,8 +72,6 @@ def distance_to_similarity(dist):
         d = float(dist)
     except Exception:
         return 0.0
-    if 0.0 <= d <= 2.0:
-        return max(0.0, 1.0 - (d / 2.0))
     return 1.0 / (1.0 + d)
 
 def detect_language_simple(text: str) -> str:
@@ -89,38 +88,26 @@ def detect_language_simple(text: str) -> str:
     return "fr"  # prefer French default (your preference)
 
 # ---------- Multi-query (reformulations) ----------
-def synthetic_reformulations(query: str, n: int = 4) -> List[str]:
-    """
-    Quick and cheap reformulations:
-     - original
-     - lowercase / trimmed
-     - remove punctuation
-     - small typo versions (drop a char)
-     - replace common tokens (C# -> c sharp)
-    """
-    q = query.strip()
+
+def normalize_query(q: str) -> str:
+    q = q.lower()
+    q = q.replace("t'as", "tu as")
+    q = q.replace("t as", "tu as")
+    q = q.replace("quel age", "quel âge")
+    q = unicodedata.normalize("NFKC", q)  # normalise accents/unicode
+    return q
+
+def synthetic_reformulations(query: str, n: int = 5) -> List[str]:
+    q = normalize_query(query.strip())
     reforms = [q]
-    # lower/normalized
-    reforms.append(q.lower())
-    # punctuation removed
-    reforms.append(re.sub(r"[^\w\sæøåàâäéèêëïîôöùûüç#\+]", " ", q))
-    # simple token replacements
-    rep = q.replace("C#", "C sharp").replace("c#", "C sharp").replace("C++", "C plus plus")
-    if rep != q:
-        reforms.append(rep)
-    # typo: drop a char in the middle if long enough
+    reforms.append(q.replace("â", "a").replace("é", "e"))  # accentless variant
+    reforms.append(re.sub(r"[^\w\s]", " ", q))  # punctuation removed
+    if "c#" in q:
+        reforms.append(q.replace("c#", "c sharp"))
     if len(q) > 6:
         i = len(q)//2
         reforms.append(q[:i] + q[i+1:])
-    # unique and limit
-    seen = []
-    for r in reforms:
-        rr = " ".join(r.split())
-        if rr not in seen:
-            seen.append(rr)
-        if len(seen) >= n:
-            break
-    return seen
+    return list(dict.fromkeys(reforms))[:n]
 
 def llm_reformulations(query: str, n: int = 3, timeout_s: int = 6) -> List[str]:
     """
@@ -136,7 +123,7 @@ def llm_reformulations(query: str, n: int = 3, timeout_s: int = 6) -> List[str]:
             model=MODEL_NAME,
             messages=[{"role":"user","content":prompt}],
             temperature=0.2,
-            max_tokens=300,
+            max_tokens=500,
             timeout=timeout_s
         )
         choices = getattr(resp, "choices", None) or resp.get("choices", None)
@@ -157,18 +144,34 @@ def llm_reformulations(query: str, n: int = 3, timeout_s: int = 6) -> List[str]:
         return synthetic_reformulations(query, n)
 
 # ---------- Retrieval helper ----------
-def retrieve_for_query(q: str, k: int = 15):
+def retrieve_for_query(q: str, k: int = 60):
     q_emb = embed_texts([q])[0] 
-    res = col.query(query_embeddings=[q_emb.tolist()], n_results=k, include=["documents", "metadatas", "distances"])
+    res = col.query(
+        query_embeddings=[q_emb.tolist()], 
+        n_results=k, 
+        include=["documents", "metadatas", "distances"]
+    )
+    
     docs = res.get("documents", [[]])[0]
     metas = res.get("metadatas", [[]])[0]
     dists = res.get("distances", [[]])[0]
+    
     items = []
     for doc, meta, dist in zip(docs, metas, dists):
         src = meta.get("source", "unknown") if isinstance(meta, dict) else "unknown"
         priority = meta.get("priority", 1.0) if isinstance(meta, dict) else 1.0
         sim = distance_to_similarity(dist)
-        boosted = sim * float(priority)
+        
+        # Ajouter un bonus pour les correspondances exactes de mots-clés
+        bonus = 0.0
+        query_words = set(q.lower().split())
+        doc_words = set(doc.lower().split())
+        matching_words = query_words.intersection(doc_words)
+        if matching_words:
+            bonus = 0.1 * len(matching_words)  # Bonus de 0.1 par mot correspondant
+        
+        boosted = sim * float(priority) + bonus
+        
         items.append({
             "chunk": doc,
             "source": src,
@@ -177,6 +180,7 @@ def retrieve_for_query(q: str, k: int = 15):
             "priority": float(priority),
             "boosted_sim": boosted
         })
+    
     return items
 
 # ---------- Reciprocal Rank Fusion (RRF) ----------
@@ -192,7 +196,7 @@ def rrf_combine(ranked_lists: List[List[Dict]], rrf_k: int = 60, top_n: int = 15
         for rank, item in enumerate(ranked, start=1):
             key = item.get("chunk", "")  # text as key
             scores.setdefault(key, 0.0)
-            scores[key] += 1.0 / (rrf_k + rank)
+            scores[key] += (1.0 / (rrf_k + rank)) * (1.0 + item["boosted_sim"] * 2.0)
             # keep best metadata snapshot
             if "_meta" not in item:
                 item["_meta"] = {"source": item.get("source"), "sim": item.get("sim"), "boosted": item.get("boosted_sim")}
@@ -250,28 +254,19 @@ def rerank_candidates(question: str, candidates: List[Dict], top_n: int = 3):
             temperature=0.0,
             max_tokens=80,
         )
-        choices = getattr(resp, "choices", None) or resp.get("choices", None)
-        text = ""
-        if choices:
-            first = choices[0]
-            if hasattr(first, "message"):
-                text = first.message.content
-            elif isinstance(first, dict):
-                text = first.get("message", {}).get("content") or first.get("text") or ""
-        print("[rerank_candidates] raw reranker output:", repr(text))
+        text = resp.choices[0].message.content if hasattr(resp.choices[0], "message") else ""
         nums = re.findall(r"\d+", text)
         indices = [int(n) for n in nums][:top_n]
-        ranked = []
-        for idx in indices:
-            if 1 <= idx <= len(candidates):
-                ranked.append(candidates[idx-1])
-        if not ranked:
-            print("[rerank_candidates] parsing failed -> fallback to top boosted_sim")
-            ranked = candidates[:min(top_n, len(candidates))]
-        return ranked
+        ranked = [candidates[i-1] for i in indices if 1 <= i <= len(candidates)]
+        if ranked:
+            return ranked
     except Exception as e:
-        print("[rerank_candidates] error:", e)
-        return candidates[:min(top_n, len(candidates))]
+        print("[rerank_candidates] LLM rerank failed:", e)
+
+    # Fallback: tri par boosted_sim décroissant
+    print("[rerank_candidates] fallback -> boosted_sim")
+    return sorted(candidates, key=lambda x: x["boosted_sim"], reverse=True)[:top_n]
+
 
 # ---------- Build final prompt to answer ----------
 def build_answer_prompt(question: str, contexts: List[Dict], lang: str):
@@ -285,8 +280,6 @@ def build_answer_prompt(question: str, contexts: List[Dict], lang: str):
     lang_instr = "Réponds en français." if lang == "fr" else "Answer in English."
     prompt = (
         f"{SYSTEM_INSTRUCTIONS}\n\n{lang_instr}\n\nCONTEXT:\n{ctx_block}\n\nQUESTION: {question}\n\n"
-        "Answer concisely, in first person if appropriate. If the information is not in the context, reply exactly:\n"
-        "\"I don't know based on my documents — please check the portfolio or ask me directly.\"\n"
     )
     return prompt
 
@@ -341,11 +334,15 @@ def qa():
     # 2) retrieve for each reformulation
     ranked_lists = []
     for r in reforms:
-        items = retrieve_for_query(r, k=15)
-        # sort by boosted_sim descending (already similar)
+        items = retrieve_for_query(r, k=100)
+        for item in items:
+            if item["sim"] < 0.05:
+                # Réduire l'impact des items peu similaires sans les exclure complètement
+                item["boosted_sim"] *= 0.3  # Réduction du poids
+        
         items_sorted = sorted(items, key=lambda x: x["boosted_sim"], reverse=True)
         ranked_lists.append(items_sorted)
-    print(f"[retrieve] got {len(ranked_lists)} lists (k=15)")
+    print(f"[retrieve] got {len(ranked_lists)} lists (k=100)")
 
     # 3) aggregate with RRF
     rrf_results = rrf_combine(ranked_lists, rrf_k=60, top_n=12)
@@ -354,8 +351,8 @@ def qa():
         print(f"  {i}. {it.get('source')} rrf={it.get('rrf_score'):.4f} boosted={it.get('boosted_sim'):.3f}")
 
     # 4) rerank top candidates using LLM focused on relevance
-    top_for_rerank = rrf_results[:8]  # give reranker up to 8
-    top_after_rerank = rerank_candidates(q, top_for_rerank, top_n=3)
+    top_for_rerank = rrf_results[:24]  
+    top_after_rerank = rerank_candidates(q, top_for_rerank, top_n=6)
 
     print("[top_after_rerank] chosen chunks:")
     for i, it in enumerate(top_after_rerank, start=1):
@@ -365,9 +362,9 @@ def qa():
     prompt = build_answer_prompt(q, top_after_rerank, lang)
     print(f"[/qa] Prompt length: {len(prompt)} chars")
     # optional debug: print prompt prefix
-    print(f"[/qa] Prompt preview:\n{prompt[:1200]}\n--- end prompt preview ---\n")
+    print(f"[/qa] Prompt preview:\n{prompt}\n--- end prompt preview ---\n")
 
-    answer = ask_llm(prompt, max_tokens=400, temp=0.1)
+    answer = ask_llm(prompt, max_tokens=2048, temp=0.1)
     elapsed = time.time() - start
     print(f"[/qa] Completed in {elapsed:.2f}s")
 
