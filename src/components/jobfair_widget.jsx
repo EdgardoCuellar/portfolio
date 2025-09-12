@@ -40,7 +40,7 @@ export default function JobFairWidget({ apiUrl, apiKey }) {
   return (
     <div className="w-full min-h-[300px] flex flex-col items-center justify-center gap-4">
       <div className="max-w-xl w-full p-6 bg-secondary rounded-lg text-text">
-        <h4 className="text-xl font-bold mb-3 text-accent">Any question about me ? (EN/FR)</h4>
+        <h4 className="text-xl font-bold mb-3 text-accent">Any question about me ? (EN/FR) Available weekdays 9AM-18PM</h4>
 
         <textarea
           value={q}
