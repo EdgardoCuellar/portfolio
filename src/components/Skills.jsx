@@ -4,6 +4,7 @@ const skills = [
     { name: "C++", type: "programming" },
     { name: "Python", type: "programming" },
     { name: "JavaScript", type: "programming" },
+    { name: "C#", type: "programming" },
     { name: "ASML", type: "programming" },
     { name: "HTML", type: "programming" },
     { name: "PHP", type: "programming" },
