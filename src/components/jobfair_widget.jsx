@@ -72,7 +72,7 @@ CONTEXT:
           "X-Title": "Job Fair Widget",           // Optional, identifies your app
         },
         body: JSON.stringify({
-          model: "stepfun/step-3.5-flash:free",
+          model: "nvidia/nemotron-3-nano-30b-a3b:free",
           messages: [
             {
               role: "system",
@@ -152,7 +152,7 @@ CONTEXT:
         )}
 
         <div className="mt-3 text-xs text-gray-500">
-          Run on Openrouter API using "stepfun/step-3.5-flash:free".
+          Run on Openrouter API using "nvidia/nemotron-3-nano-30b-a3b:free".
         </div>
       </div>
     </div>
