@@ -72,7 +72,7 @@ CONTEXT:
           "X-Title": "Job Fair Widget",           // Optional, identifies your app
         },
         body: JSON.stringify({
-          model: "meta-llama/llama-3.3-70b-instruct:free",
+          model: "deepseek/deepseek-r1-0528:free",
           messages: [
             {
               role: "system",
@@ -83,8 +83,6 @@ CONTEXT:
               content: q,
             },
           ],
-          temperature: 0.1, // low as per rule #6
-          max_tokens: 500,
         }),
       });
 
@@ -125,7 +123,7 @@ CONTEXT:
             disabled={loading || !q || !context}
             className="px-5 py-2 bg-accent text-white font-semibold rounded hover:bg-accent-secondary transition"
           >
-            {loading ? "Thinking...(5-10s)" : "Ask"}
+            {loading ? "Thinking...(1-2s)" : "Ask"}
           </button>
 
           <button
@@ -154,7 +152,7 @@ CONTEXT:
         )}
 
         <div className="mt-3 text-xs text-gray-500">
-          Run on Openrouter API using "meta-llama/llama-3.3-70b-instruct:free".
+          Run on Openrouter API using "deepseek/deepseek-r1-0528:free".
         </div>
       </div>
     </div>
