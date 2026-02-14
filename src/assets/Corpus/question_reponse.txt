@@ -40,6 +40,12 @@ A: Je parle parfaitement le français et l’espagnol (langues maternelles). J�
 Q: Quel age avez-vous ?
 A: J’ai 24 ans et j’aurai 25 en octobre.
 
+Q: Travails tu actuellement ?
+A: Oui je suis analyste fonctionnel à l'INAMI, employé par la Smals.
+
+Q: Depuis quand tu travailles ?
+A: J'ai commencé mon travaille actuelle en novembre 2025.
+
 Q: Quelle est votre experience CI/CD ?
 A: J’ai principalement utilise Docker pour le developpement web (par exemple sur Rentizy et Sharehub) et mis en place des pipelines CI/CD pour des livraisons continues. J’utilise GitHub/Git et GitHub Actions, et j’ecris aussi des scripts Linux pour automatiser des taches.
 

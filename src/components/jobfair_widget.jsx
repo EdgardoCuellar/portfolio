@@ -72,7 +72,7 @@ CONTEXT:
           "X-Title": "Job Fair Widget",           // Optional, identifies your app
         },
         body: JSON.stringify({
-          model: "deepseek/deepseek-r1-0528:free",
+          model: "stepfun/step-3.5-flash:free",
           messages: [
             {
               role: "system",
@@ -152,7 +152,7 @@ CONTEXT:
         )}
 
         <div className="mt-3 text-xs text-gray-500">
-          Run on Openrouter API using "deepseek/deepseek-r1-0528:free".
+          Run on Openrouter API using "stepfun/step-3.5-flash:free".
         </div>
       </div>
     </div>
