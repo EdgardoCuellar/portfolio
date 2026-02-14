@@ -70,7 +70,7 @@ CONTEXT:
           "X-Title": "Job Fair Widget",           // Optional, identifies your app
         },
         body: JSON.stringify({
-          model: "openai/gpt-oss-120b:free",
+          model: "qwen/qwen3-235b-a22b-thinking-2507",
           messages: [
             {
               role: "system",
@@ -121,7 +121,7 @@ CONTEXT:
             disabled={loading || !q || !context}
             className="px-5 py-2 bg-accent text-white font-semibold rounded hover:bg-accent-secondary transition"
           >
-            {loading ? "Thinking...(1-2s)" : "Ask"}
+            {loading ? "Thinking...(5-10s)" : "Ask"}
           </button>
 
           <button
@@ -150,7 +150,7 @@ CONTEXT:
         )}
 
         <div className="mt-3 text-xs text-gray-500">
-          Run on Openrouter API using "openai/gpt-oss-120b:free".
+          Run on Openrouter API using "qwen/qwen3-235b-a22b-thinking-2507".
         </div>
       </div>
     </div>
