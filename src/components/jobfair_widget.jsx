@@ -13,7 +13,7 @@ const fileDict = {
   "informel.txt": { content: informal, importance: 4 },
   "profile.txt": { content: profileTxt, importance: 5 },
   "question_reponse.txt": { content: qaTxt, importance: 5 },
-  "website_project_extracted.txt": { content: portfolioTxt, importance: 2 },
+  //"website_project_extracted.txt": { content: portfolioTxt, importance: 2 },
 };
 
 export default function JobFairWidget({ apiKey }) {
@@ -72,7 +72,7 @@ CONTEXT:
           "X-Title": "Job Fair Widget",           // Optional, identifies your app
         },
         body: JSON.stringify({
-          model: "nvidia/nemotron-3-nano-30b-a3b:free",
+          model: "openai/gpt-oss-120b:free",
           messages: [
             {
               role: "system",
@@ -152,7 +152,7 @@ CONTEXT:
         )}
 
         <div className="mt-3 text-xs text-gray-500">
-          Run on Openrouter API using "nvidia/nemotron-3-nano-30b-a3b:free".
+          Run on Openrouter API using "openai/gpt-oss-120b:free".
         </div>
       </div>
     </div>
