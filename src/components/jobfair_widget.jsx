@@ -13,7 +13,7 @@ const fileDict = {
   "informel.txt": { content: informal, importance: 4 },
   "profile.txt": { content: profileTxt, importance: 5 },
   "question_reponse.txt": { content: qaTxt, importance: 5 },
-  //"website_project_extracted.txt": { content: portfolioTxt, importance: 2 },
+  "website_project_extracted.txt": { content: portfolioTxt, importance: 3 },
 };
 
 export default function JobFairWidget({ apiKey }) {
@@ -39,14 +39,12 @@ export default function JobFairWidget({ apiKey }) {
   const systemPromptBase = `You are an assistant that uses only the provided CONTEXT chunks to answer.
 RULES (strict):
 1) Detect the user's language and answer in that language. If the language cannot be detected, default to French.
-2) Be concise: -5 sentences for factual answers. Optionally ask "Do you want more details?" at the end.
+2) Be concise: -5 sentences for factual answers.
 3) Do NOT mention, print or list any sources, filenames, or indices in the answer. Never output lines like "Source: [3]".
-4) Use only information present in the provided CONTEXT. If you cannot answer from the context, reply exactly:
-   "I don't know based on my documents — please check the portfolio or ask me directly."
+4) Use only information present in the provided context. Or try to find the answer by combining multiple pieces of information from different context chunks.
 5) Do not invent facts or numbers. If asked for an opinion, prefix with "Opinion:".
-6) Keep temperature low (0.-0.2).
-7) Always talk as me, as "I am", "I did", ...  
-8) Importance metric is provided for each context chunk, prioritize higher (5) importance ones when formulating the answer. Lower importance (1).
+6) Always talk as me, as "I am", "I did", ...  
+7) Importance metric is provided for each context chunk, prioritize higher (5) importance ones when formulating the answer. Lower importance (1).
 
 CONTEXT:
 `;

@@ -1,45 +1,129 @@
-The Actiris workflow scrapes offer URLs and analyzes them for relevance, while the LinkedIn workflow monitors clicked offers and instantly analyzes them. All relevant offers are saved for review, and a dashboard helps visualize and track your job search.
-`,image:"https://i.ibb.co/KPWwm84/Linkedin-dashboard.jpg",link:"https://github.com/EdgardoCuellar/JobSeeker"}},{title:"Rentizy",date:"2023 - 2025",description:"A platform simplifying property rental and management for both landlords and tenants",icon:"🏠",tools:["Django","TailwindCSS","JavaScript","SQL","Azure","Agile","UML"],details:{text:`Rentizy is a property management MVP designed to simplify and automate the rental process for both property owners and tenants. From auto-generating rental contracts to handling maintenance reports and enabling property search for individuals and co-living arrangements, the platform centralizes everything.
-I co-founded the project with a partner who brought the initial idea and business expertise. I led the technical development using Django, TailwindCSS, JavaScript, SQL, and Azure, while we worked in agile methodology and with some UML schema with regular short call meetings. Later, we expanded the team to four by hiring a UI/UX designer and a backend developer.
-The project ran from November 2023 to January 2025, when I quit to focus on my long backpack trip.`,image:rh,link:"https://rentizy.io/"}},{title:"ShareHub",date:"2023 - 2024",description:"A second-hand syllabus marketplace built from scratch with a redistributive model",icon:"🌐",tools:["Django","TailwindCSS","JavaScript","SQL","Docker","Nginx","Apache","Photoshop"],details:{text:`ShareHub is a full-featured second-hand marketplace I built alone during my master's thesis. The platform focuses on reselling university course materials with a redistributive economic model.
-I handled the entire development cycle, from backend logic with Django to frontend interfaces using TailwindCSS and JavaScript, plus deployment on Linux servers with Docker, Nginx, and Apache. I included some features like encrypted messaging, account management, rating systems, and filtered searches.
-All UI/UX design was done by me, primarily using Photoshop. I also managed outreach and promotional efforts through social media and university networks.`,image:bh,link:"https://github.com/EdgardoCuellar/ShareHub"}},{title:"Communcation manager ESN ULB Brussels",date:"2023 - 2024",description:"Lead communications for an international student organization with 4K+ followers.",icon:"🖼️",tools:["Photoshop","Illustrator","Canva","Social Media","Project Management"],details:{text:`As part of my student association (ESN), we needed a way to organize secure and anonymous internal votes. Most existing platforms were either paid or lacked transparency, so I decided to build our own.
+LIST OF PRJECT I HAVE WORKED ON: 
 
-ESN Vote System is a lightweight, open-source voting platform using public/private key encryption to ensure anonymity and vote integrity. Admins can easily open or close a vote, distribute unique keys, and display results dynamically through a live chart. Each key is tied to a single vote, making multiple submissions impossible.
+💼
+JobSeeker: Automated Job Offer Scraper & Analyzer
+2025
 
-This project was a way for me to apply what I had just learned in a cryptography course, and to prove that with a bit of code, we can replace overpriced services with simple, secure, and transparent tools.`,image:yh,link:"https://www.instagram.com/esnulbbrussels/"}},{title:"ESN Vote System",date:"2024",description:"Built a secure and anonymous voting system for my student association using cryptography.",icon:"🗳️",tools:["Django","Javascript","Crypto","Docker","Matplotlib","HTML","CSS"],details:{text:`  As Communication Manager at ESN ULB Brussels, I noticed the lack of free and reliable voting tools for our internal decisions. Most platforms were paid, so I decided to build our own system — simple, secure, and anonymous.
+Python tool to scrape, analyze, and track job offers from Actiris and LinkedIn using LLMs.
 
-  ESN Vote System uses public/private key cryptography to ensure that each member can vote only once and that all votes remain anonymous. Keys are distributed in advance, and results are dynamically displayed using graphs. Admins can open or close voting sessions, verify key validity, and manage everything through a lightweight interface.
+Python, Selenium, BeautifulSoup, Flask, LLM, LM Studio, CSV, JSON
 
-  This project was also an opportunity to apply concepts from a cryptography course I had recently completed and to create something directly useful for the community.`,image:null,link:"https://github.com/EdgardoCuellar/esn_vote_system"}},{title:"Shark Classifier & Generative AI",date:"2023",description:"An image classification and generation model for aquatic animals and candy",icon:"🎮",tools:["PyTorch","CNN","ImageNet","Generative Models"],details:{text:`This short project involved classifying images of sharks, dolphins, and whales using a convolutional neural network built with PyTorch. Once we removed the final classification layer, we repurposed the model into a generative network capable of producing realistic shark images from noise.
-We trained it on an open-source animal dataset (ImageNet) before training a similar network to classify different Haribo candy types because why not?
-The project was a fun and creative dive into LLM, transfer learning and generative networks.`,image:null,link:"https://github.com/EdgardoCuellar/autoencodeur_animaux_marins"}},{title:"Anime recommender",date:"2023",description:"A big data project using PySpark to recommend anime with hybrid recommendation using PySpark",icon:"🤓",tools:["Apache Spark","Big Data","Recommender Systems","Python","PySpark"],details:{text:`An anime recommendation system built using Big Data tools, notably Apache Spark. We implemented a hybrid recommendation model combining collaborative filtering (based on user preferences) with content-based filtering (based on anime features like genre, rating, etc).
-The system handled large datasets efficiently and provided personalized suggestions while maintaining scalability. We fine-tuned the performance using Spark’s and integrated it into a clean frontend demo to show the results.
-This project taught us a lot about recommender systems, big data pipelines, and model evaluation in distributed environments.`,image:null,link:"https://github.com/EdgardoCuellar/Anime-recommandation"}},{title:"My own programming language",date:"2023",description:"A custom-made, minimal programming language written in Python.",icon:"🧠",tools:["Python","Compilers","Interpreter","Parsing"],details:{text:`A minimalist programming language I co-developed with a friend over two months, as part of a university course on programming languages. It supported arithmetic operations, loops, conditionals, and jumps.
-The project aimed to help us deeply understand parsing, evaluation, and compiler theory. We wrote a full interpreter from scratch in Python, simulating a low-level execution model.
-Designing and debugging a language from the ground up was one of the most mentally challenging and rewarding experiences I've had in code.`,image:null,link:"https://github.com/EdgardoCuellar/FortressLanguage"}},{title:"MNIST Number Recognizer",date:"2022",description:"A basic handwritten digit recognizer using a multilayer neural network",icon:"🔢",tools:["LLM","CUDA","MNIST","Neural Network"],details:{text:`In this project, we implemented and explained a simple neural network capable of recognizing handwritten digits from the MNIST dataset. Built with a multi-layer perceptron and trained on an NVIDIA GPU using CUDA, the core of the model (as we joked) was basically just a fancy pile of matrix multiplications.
-One of our teammates even created a short video to explain the project in an accessible way, it made for a nice mix of machine learning and science communication.`,image:null,link:"https://www.youtube.com/watch?v=vvz41yM6C48"}},{title:"AutoChef",date:"2021 - 2022",description:"A collaborative Java project managing recipes, menus, and groceries in a simulated company",icon:"🧑‍🍳",tools:["Java","SCRUM","UML","OOP","Open Source"],details:{text:`AutoChef is a desktop application built in Java by a team of 9, simulating a real company environment to manage recipes, menus, and grocery planning. The project was designed to teach team collaboration, documentation (SRD), and agile methods with a dedicated SCRUM master.
-In reality, three of us carried most of the development, and I personally took on the leadership and core logic development, especially the recipe, menu, and calendar features. With Java’s strong object-oriented model, this project was a deep dive into software architecture.
-It has it's intense work phases, sometimes exceeding 40 hours a week to hit our delivery goals. We were proud of the final result, which we published open source, and were awarded the highest grade out of 11 teams.`,image:dh,link:"https://github.com/etoome/AutoChef"}},{title:"Lopsa",date:"2021",description:"A party game mobile app for drinking nights, made in Flutter",icon:"📱",tools:["Flutter","Dart","State Management"],details:{text:`Lopsa is a drinking game mobile app developed with Flutter. It was my second attempt at mobile development and a major improvement over my Java-based app experience.
-Flutter’s reactive approach and state management made building the UI much smoother. I learned a lot about managing game states and UI logic in a more structured way.
-Fun fact: the app was eventually banned from the Play Store, but I still have the source code and a working version on my phone, used occasionally at parties.`,image:vh,link:null}},{title:"L-Type",date:"2020 - 2021",description:"An online C++ shoot-em-up game with a custom OpenGL engine.",icon:"🎮",tools:["C++","OpenGL","GitHub","UML","CI/CD"],details:{text:`L-Type is an online shoot-em-up video game developed over one year as a university team project. Our team of 8 was effectively 3 developers, with myself managing the creation of a custom OpenGL engine that enabled easier development for the rest of the group.
-I also designed and coded the entire menu system. The project emphasized object-oriented programming, teamwork, server logic, delivery deadlines, quality assurance, and continuous integration via GitHub workflows. We earned the highest grade in the entire class.`,image:gh,link:"https://github.com/ULB-INFO-F-209/l-type-groupe-2-2020"}},{title:"PHP Social Network",date:"2018 - 2019",description:"A complete social network clone built from scratch in raw PHP HTML CSS and SQL",icon:"🌐",tools:["PHP","SQL","HTML","CSS","JavaScript"],details:{text:`This was my first real web project, a complete social network made entirely in PHP, HTML, CSS, SQL, and just a little JavaScript. It was inspired by platforms like Facebook, and included user profiles, posts, likes, and more.
-Though the code was a bit chaotic in retrospect, it taught me how to build a website from scratch and introduced me to full-stack web development. I was young and learning fast, so no judgment please!
-There’s still a demo video online showing what I built.`,image:hh,link:"https://www.youtube.com/watch?v=Ugi7VaJtZJ8"}},{title:"Reflexed",date:"2018",description:"A second-hand marketplace platform built in Django.",icon:"📱",tools:["Java","Android Studio"],details:{text:`Reflexed was my first mobile app, developed in Java using Android Studio. The goal was to challenge reflexes and mental math speed through quick interactions and timers.
-It was created after I followed a few tutorials, then expanded it on my own. As my first step into Android development, it taught me about app structure, UI basics, and event handling.
-Sadly, like many early projects, I lost the code and APK. Still, it marks a significant milestone in my developer journey.`,image:null,link:null}},{title:"Bubbled (Game prototype)",date:"2017",description:"A polished arcade game built in Construct 2 almost without writing code",icon:"🎮",tools:["Construct 2","Game Design","No-Code"],details:{text:`Space Defender is a complete arcade-style game I created using Construct 2, a no-code game engine that relies on visual logic and JavaScript-style event systems.
-I was quite proud of this one, not only because I learned to master a new tool, but because I created an original and fun concept that felt complete. This was during the time I wanted to work in the game industry.
-Thankfully, I didn’t lose the files, and I still have a video from that time showcasing the gameplay.`,image:mh,link:"https://youtu.be/_IDuZsoMH7Y"}},{title:"Stickman Basement",date:"2017",description:"My first big project: a Python gravity platformer made with Pygame",icon:"🎮",tools:["Python","Pygame","Game Engine"],details:{text:`Stickman Basement was the first serious project I ever developed, a 2D gravity-based platformer built with Python and Pygame over three months of coding.
-It was rough and experimental, but it helped me create my first mini game engine and understand object oriented programming. That early experience laid the foundation for the game engine I later wrote for L-Type.
-Unfortunately, I lost all the original files, and only a short video remains, a nostalgic relic of my beginnings in code.`,image:ph,link:"https://youtu.be/zm79zrDI1Z0"}},{title:"Others",description:"Collection of small and personal creative experiments.",tools:["Python","JavaScript","C","React","AI","Fun"],icon:"✨",date:"2015 – 2025",isOthers:!0,details:{text:`A bunch of small personal or experimental projects I've built along the way:
+🏠
+Rentizy
+2023 - 2025
 
-- An AI chatbot using ChatGPT fine tuned to mimic my friends messages.
-- A fractal explorer to zoom deep into fractals sets.
-- Pathfinding algorithms for maze solving and shortest path demo.
-- A simplified real-time simulation of the solar system.
-- An image matching algorithm to stitch photos into a big panorama.
-- An implementation of Conway’s Game of Life.
-- And many more unfinished prototypes, weekend hacks, or curiosities...
+A platform simplifying property rental and management for both landlords and tenants
 
-Sometimes the smallest projects are the most fun.`}}];function xh(){const[h,M]=rl.useState(null);return T.jsxs("section",{id:"projects",className:"py-8 px-6 max-w-6xl mx-auto",children:[T.jsx("h2",{className:"text-3xl font-bold text-center text-text mb-12",children:"Projects"}),T.jsx("div",{className:"grid gap-8 md:grid-cols-2 lg:grid-cols-3",children:Sh.map((E,r)=>{var U;return T.jsxs("div",{className:`relative p-6 rounded-lg cursor-pointer border transition duration-300 ${E.isOthers?"bg-transparent border-accent border-dashed text-accent-secondary shadow-none hover:shadow-md hover:bg-secondary/10 hover:border-accent-secondary":"bg-secondary border-transparent hover:border-accent hover:shadow-lg shadow-md text-text"}`,onClick:()=>M(E),children:[!E.isOthers&&T.jsxs("div",{className:"flex items-center gap-2 mb-4",children:[T.jsx("span",{className:"w-3 h-3 rounded-full bg-red-500"}),T.jsx("span",{className:"w-3 h-3 rounded-full bg-yellow-400"}),T.jsx("span",{className:"w-3 h-3 rounded-full bg-green-500"})]}),T.jsx("div",{className:"absolute top-2 right-2 text-xl",children:typeof E.icon=="string"?E.icon:T.jsx(E.icon,{})}),T.jsx("h3",{className:"text-xl font-semibold",children:E.title}),T.jsx("p",{className:"text-sm text-accent-secondary",children:E.date}),T.jsx("p",{className:"text-sm mt-2",children:E.description}),T.jsx("p",{className:"text-xs mt-3 text-accent",children:(U=E.tools)==null?void 0:U.join(", ")})]},r)})}),h&&T.jsx("div",{className:"fixed inset-0 backdrop-blur-sm bg-black/40 flex items-center justify-center z-50 transition-all duration-300 scale-100 hover:scale-[1.02]",onClick:()=>M(null),children:T.jsx("div",{className:"bg-secondary rounded-lg max-w-xl w-[90%] shadow-lg overflow-hidden",onClick:E=>E.stopPropagation(),children:T.jsxs("div",{className:"relative max-h-[80vh] overflow-y-auto p-6 pt-10 scrollbar scrollbar-thumb-accent-secondary scrollbar-track-transparent",children:[T.jsx("button",{className:"absolute top-3 left-3 text-accent-secondary hover:text-accent text-base",onClick:()=>M(null),children:"✖"}),h.details.image&&T.jsx("img",{src:h.details.image,alt:h.title,className:"mb-4 rounded max-h-64 w-full object-contain"}),T.jsx("h3",{className:"text-2xl font-bold text-text mb-1",children:h.title}),T.jsx("p",{className:"text-sm text-accent-secondary mb-2",children:h.date}),h.tools&&T.jsx("p",{className:"text-xs text-accent mb-4",children:h.tools.join(", ")}),T.jsx("p",{className:"text-text text-justify whitespace-pre-line",children:h.details.text}),h.details.link&&T.jsx("a",{href:h.details.link,target:"_blank",rel:"noopener noreferrer",className:"mt-4 inline-block text-accent hover:underline",children:"Visit project ↗"})]})})})]})}function Th(h){return Ll({attr:{viewBox:"0 0 24 24",fill:"none",stroke:"currentColor",strokeWidth:"2",strokeLinecap:"round",strokeLinejoin:"round"},child:[{tag:"path",attr:{d:"M4 10a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"},child:[]},{tag:"path",attr:{d:"M8 10h8"},child:[]},{tag:"path",attr:{d:"M8 18h8"},child:[]},{tag:"path",attr:{d:"M8 22v-6a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v6"},child:[]},{tag:"path",attr:{d:"M9 6V4a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2"},child:[]}]})(h)}function Ah(h){return Ll({attr:{viewBox:"0 0 24 24"},child:[{tag:"path",attr:{fill:"none",d:"M0 0h24v24H0z"},child:[]},{tag:"path",attr:{d:"m18.85 10.39 1.06-1.06c.78-.78.78-2.05 0-2.83L18.5 5.09c-.78-.78-2.05-.78-2.83 0l-1.06 1.06 4.24 4.24zm-4.24 1.42L7.41 19H6v-1.41l7.19-7.19 1.42 1.41zm-1.42-4.25L4 16.76V21h4.24l9.19-9.19-4.24-4.25zM19 17.5c0 2.19-2.54 3.5-5 3.5-.55 0-1-.45-1-1s.45-1 1-1c1.54 0 3-.73 3-1.5 0-.47-.48-.87-1.23-1.2l1.48-1.48c1.07.63 1.75 1.47 1.75 2.68zM4.58 13.35C3.61 12.79 3 12.06 3 11c0-1.8 1.89-2.63 3.56-3.36C7.59 7.18 9 6.56 9 6c0-.41-.78-1-2-1-1.26 0-1.8.61-1.83.64-.35.41-.98.46-1.4.12a.992.992 0 0 1-.15-1.38C3.73 4.24 4.76 3 7 3s4 1.32 4 3c0 1.87-1.93 2.72-3.64 3.47C6.42 9.88 5 10.5 5 11c0 .31.43.6 1.07.86l-1.49 1.49z"},child:[]}]})(h)}const Eh="/assets/moi_lama-BE-a8Lj7.png";function zh(){return T.jsxs("section",{id:"about",className:"py-10 px-6 max-w-4xl mx-auto",children:[T.jsx("h2",{className:"text-3xl font-bold text-center text-text mb-10",children:"About Me"}),T.jsxs("div",{className:"flex flex-col md:flex-row items-center gap-10",children:[T.jsx("div",{className:"w-full md:w-1/3 flex justify-center",children:T.jsx("div",{className:"rounded-xl overflow-hidden shadow-md border border-accent-secondary bg-background",children:T.jsx("img",{src:Eh,alt:"Edgardo Cuellar Sanchez",className:"w-full h-full object-cover"})})}),T.jsxs("div",{className:"w-full md:w-2/3 text-text space-y-4",children:[T.jsxs("p",{className:"leading-relaxed",children:[T.jsx("p",{children:"Hey it's me Edgardo, I'm a pretty chill guy who doesn't sweat the small stuff. I love jumping into new projects, whether by myself or with others, usually figuring things out as I go. When I find some free time, I enjoy coding random little things, mostly fun stuff for me or my friends. I got into visual design through making memes, which eventually led to helping non-profits and designing my own project websites."}),T.jsx("p",{children:"Travel is another passion, the real backpacking kind, far from five-star hotels. I'm just back from an 8 month trip through Latin America, hitting 14 countries with almost no flights involved. Oh, also I really like cooking too, mainly because, well, I really like eating."})]}),T.jsxs("div",{className:"flex flex-wrap gap-4 pt-2",children:[T.jsxs("span",{className:"flex items-center gap-2 text-sm font-semibold text-accent",children:[T.jsx(fh,{})," IT Projects"]}),T.jsxs("span",{className:"flex items-center gap-2 text-sm font-semibold text-accent",children:[T.jsx(Th,{})," Backpacking"]}),T.jsxs("span",{className:"flex items-center gap-2 text-sm font-semibold text-accent",children:[T.jsx(Ah,{})," Design"]}),T.jsxs("span",{className:"flex items-center gap-2 text-sm font-semibold text-accent",children:[T.jsx(sh,{})," Cooking"]})]})]})]})]})}function Mh(){return T.jsxs("section",{id:"contact",className:"py-8 mb-8 px-6 max-w-3xl mx-auto text-center",children:[T.jsx("h2",{className:"text-3xl font-bold text-text mb-8",children:"Contact"}),T.jsx("p",{className:"text-text mb-6",children:"Want to get in touch? Whether it's about an opportunity or just to share something cool:"}),T.jsxs("a",{href:"mailto:edgardo-cuellar@hotmail.com",target:"_blank",rel:"noopener noreferrer",className:`relative px-6 py-2 border-2 border-accent-secondary text-accent-secondary font-semibold rounded overflow-hidden group transition-colors duration-300\r
-          shadow-[0_0_8px_1px_theme(colors.accentSecondary/0.5)] animate-pulse`,children:[T.jsx("span",{className:"absolute inset-0 left-0 w-0 bg-accent-secondary transition-all duration-300 group-hover:w-full z-0"}),T.jsx("span",{className:"relative text-lg z-10 group-hover:text-white transition-colors duration-300",children:"Email me"})]})]})}function Oh(){return T.jsxs("footer",{className:"py-6 text-center text-sm text-text/60",children:["© ",new Date().getFullYear()," Edgardo Cuellar Sanchez — Contact me for the code :)"]})}const _h=[{name:"Java",type:"programming"},{name:"C",type:"programming"},{name:"C++",type:"programming"},{name:"Python",type:"programming"},{name:"JavaScript",type:"programming"},{name:"ASML",type:"programming"},{name:"HTML",type:"programming"},{name:"PHP",type:"programming"},{name:"SQL",type:"database"},{name:"PostgreSQL",type:"database"},{name:"Spark",type:"database"},{name:"Pytorch",type:"ia"},{name:"Django",type:"framework"},{name:"React",type:"framework"},{name:"Flutter",type:"framework"},{name:"Node.js",type:"framework"},{name:"Agile",type:"methodology"},{name:"Scrum",type:"methodology"},{name:"UML",type:"methodology"},{name:"CSS",type:"design"},{name:"TailwindCSS",type:"design"},{name:"Figma",type:"design"},{name:"Photoshop",type:"design"},{name:"Ilustrator",type:"design"},{name:"GitHub",type:"programming"},{name:"Docker",type:"programming"},{name:"Linux",type:"programming"},{name:"Bash",type:"programming"}],Dh={programming:"border-blue-500 text-blue-500",framework:"border-green-500 text-green-500",methodology:"border-purple-500 text-purple-500",design:"border-pink-500 text-pink-500",database:"border-yellow-500 text-yellow-500",ia:"border-red-500 text-red-500"};function Nh(){return T.jsxs("section",{id:"skills",className:"py-8 px-6 max-w-6xl mx-auto mt-4",children:[T.jsx("h2",{className:"text-3xl font-bold text-center text-text mb-12",children:"Skills"}),T.jsx("div",{className:"flex flex-wrap gap-3 justify-center",children:_h.map((h,M)=>T.jsx("span",{className:`px-4 py-2 rounded-full border-2 font-bold transition duration-200 hover:scale-105 ${Dh[h.type]}`,children:h.name},M))})]})}function Uh(){const h=[{name:"French",level:"C2",color:"border-accent text-accent"},{name:"Spanish",level:"C1",color:"border-red-500 text-red-500"},{name:"English",level:"C1",color:"border-yellow-500 text-yellow-500"},{name:"Dutch",level:"A2",color:"border-green-500 text-green-500"}],M=[{title:"Master in Computer Science",school:"ULB & UQAM",honors:"With Highest Distinction",year:"2024"},{title:"Bachelor in Computer Science",school:"ULB",honors:"With Distinction",year:"2022"}];return T.jsx("section",{id:"languages-degrees",className:"py-8 px-6 max-w-5xl mx-auto",children:T.jsxs("div",{className:"grid md:grid-cols-2 gap-12",children:[T.jsxs("div",{children:[T.jsx("h3",{className:"text-xl font-semibold text-white text-center mb-6",children:"Languages"}),T.jsx("div",{className:"grid sm:grid-cols-2 gap-4",children:h.map(({name:E,level:r,color:U})=>T.jsxs("div",{className:`p-4 border rounded-xl text-center ${U} font-bold transition hover:scale-105 duration-200`,children:[T.jsx("p",{className:"text-lg",children:E}),T.jsxs("p",{className:"text-sm opacity-75",children:["Level: ",r]})]},E))})]}),T.jsxs("div",{children:[T.jsx("h3",{className:"text-xl font-semibold text-white text-center mb-4",children:"Academic"}),T.jsxs("div",{className:"relative flex flex-col items-center",children:[T.jsx("div",{className:"z-10 mb-2",children:T.jsx(ch,{className:"text-accent text-3xl"})}),T.jsx("div",{className:"h-6 w-0.5 bg-accent-secondary"}),T.jsxs("div",{className:"flex flex-col items-center relative",children:[M.map((E,r)=>T.jsxs("div",{className:"relative flex flex-col items-center",children:[r!==0&&T.jsx("div",{className:"w-0.5 h-8 bg-accent-secondary"}),T.jsxs("div",{className:"text-center bg-background px-4 py-2",children:[T.jsx("p",{className:"text-lg text-text font-semibold",children:E.title}),T.jsxs("p",{className:"text-sm text-accent-secondary italic",children:[E.school," – ",E.year]}),T.jsx("p",{className:"text-sm text-text",children:E.honors})]})]},r)),T.jsx("div",{className:"w-0.5 h-6 bg-accent-secondary mt-2"})]})]})]})]})})}const jh=()=>{const h=rl.useRef(null);return rl.useEffect(()=>{const M=h.current,E=M.getContext("2d"),r=M.width=M.offsetWidth,U=M.height=M.offsetHeight,Y=[],F=150;for(let b=0;b<F;b++)Y.push({x:Math.random()*r,y:Math.random()*U,radius:Math.random()*1.2,speedX:Math.random()*.6-.2,speedY:Math.random()*.6-.2,opacity:Math.random()*.8+.2});let ft;const j=()=>{E.clearRect(0,0,r,U),Y.forEach(b=>{b.x+=b.speedX,b.y+=b.speedY,b.x>r&&(b.x=0),b.x<0&&(b.x=r),b.y>U&&(b.y=0),b.y<0&&(b.y=U);const H=Math.max(0,b.opacity*(1-b.y/U*1));E.beginPath(),E.arc(b.x,b.y,b.radius,0,Math.PI*2),E.fillStyle=`rgba(255, 255, 255, ${H})`,E.fill()}),ft=requestAnimationFrame(j)};return j(),()=>{cancelAnimationFrame(ft)}},[]),T.jsx("canvas",{ref:h,className:"absolute inset-0 top-0 left-0 w-full h-full z-0 pointer-events-none"})},Rh=[{id:"projects",label:"Projects"},{id:"skills",label:"Skills"},{id:"about",label:"About Me"},{id:"contact",label:"Contact"}];function Hh(){const[h,M]=rl.useState("intro"),[E,r]=rl.useState(!1),U=Y=>{document.getElementById(Y).scrollIntoView({behavior:"smooth"}),M(Y)};return rl.useEffect(()=>{const Y=()=>{const F=window.scrollY;r(F>200)};return window.addEventListener("scroll",Y),()=>window.removeEventListener("scroll",Y)},[]),T.jsxs("div",{className:"font-sans text-text bg-primary",children:[T.jsx(jh,{}),T.jsx("header",{className:"w-full top-0 left-0 z-10",children:T.jsx(k0,{sections:Rh,scrollTo:U})}),E&&T.jsx(ah,{scrollTo:U}),T.jsxs("main",{className:"max-w-5xl mx-auto px-4",children:[T.jsx(oh,{}),T.jsx(xh,{}),T.jsx(Nh,{}),T.jsx(Uh,{}),T.jsx(zh,{}),T.jsx(Mh,{})]}),T.jsx(Oh,{})]})}J0.createRoot(document.getElementById("root")).render(T.jsx(rl.StrictMode,{children:T.jsx(Hh,{})}));
+Django, TailwindCSS, JavaScript, SQL, Azure, Agile, UML
+
+🌐
+ShareHub
+2023 - 2024
+
+A second-hand syllabus marketplace built from scratch with a redistributive model
+
+Django, TailwindCSS, JavaScript, SQL, Docker, Nginx, Apache, Photoshop
+
+🖼️
+Communcation manager ESN ULB Brussels
+2023 - 2024
+
+Lead communications for an international student organization with 4K+ followers.
+
+Photoshop, Illustrator, Canva, Social Media, Project Management
+
+🗳️
+ESN Vote System
+2024
+
+Built a secure and anonymous voting system for my student association using cryptography.
+
+Django, Javascript, Crypto, Docker, Matplotlib, HTML, CSS
+
+🎮
+Shark Classifier & Generative AI
+2023
+
+An image classification and generation model for aquatic animals and candy
+
+PyTorch, CNN, ImageNet, Generative Models
+
+🤓
+Anime recommender
+2023
+
+A big data project using PySpark to recommend anime with hybrid recommendation using PySpark
+
+Apache Spark, Big Data, Recommender Systems, Python, PySpark
+
+🧠
+My own programming language
+2023
+
+A custom-made, minimal programming language written in Python.
+
+Python, Compilers, Interpreter, Parsing
+
+🔢
+MNIST Number Recognizer
+2022
+
+A basic handwritten digit recognizer using a multilayer neural network
+
+LLM, CUDA, MNIST, Neural Network
+
+🧑‍🍳
+AutoChef
+2021 - 2022
+
+A collaborative Java project managing recipes, menus, and groceries in a simulated company
+
+Java, SCRUM, UML, OOP, Open Source
+
+📱
+Lopsa
+2021
+
+A party game mobile app for drinking nights, made in Flutter
+
+Flutter, Dart, State Management
+
+🎮
+L-Type
+2020 - 2021
+
+An online C++ shoot-em-up game with a custom OpenGL engine.
+
+C++, OpenGL, GitHub, UML, CI/CD
+
+🌐
+PHP Social Network
+2018 - 2019
+
+A complete social network clone built from scratch in raw PHP HTML CSS and SQL
+
+PHP, SQL, HTML, CSS, JavaScript
+
+📱
+Reflexed
+2018
+
+A second-hand marketplace platform built in Django.
+
+Java, Android Studio
+
+🎮
+Bubbled (Game prototype)
+2017
+
+A polished arcade game built in Construct 2 almost without writing code
+
+Construct 2, Game Design, No-Code
+
+🎮
+Stickman Basement
+2017
+
+My first big project: a Python gravity platformer made with Pygame
+
+Python, Pygame, Game Engine
