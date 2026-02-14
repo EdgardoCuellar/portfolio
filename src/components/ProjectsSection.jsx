@@ -63,12 +63,10 @@ All UI/UX design was done by me, primarily using Photoshop. I also managed outre
     tools: ["Photoshop", "Illustrator", "Canva", "Social Media", "Project Management"],
     details: {
       text: `\
-As part of my student association (ESN), we needed a way to organize secure and anonymous internal votes. Most existing platforms were either paid or lacked transparency, so I decided to build our own.
+As Communication Manager for ESN ULB Brussels, I was responsible for shaping the visual identity and online presence of one of Brussels' largest student sections, reaching over 4,000 followers.
 
-ESN Vote System is a lightweight, open-source voting platform using public/private key encryption to ensure anonymity and vote integrity. Admins can easily open or close a vote, distribute unique keys, and display results dynamically through a live chart. Each key is tied to a single vote, making multiple submissions impossible.
-
-This project was a way for me to apply what I had just learned in a cryptography course, and to prove that with a bit of code, we can replace overpriced services with simple, secure, and transparent tools.`,
-      image: esnImg,
+I designed and scheduled all Instagram content — from posts and stories to event covers and promotional materials — using Photoshop, Illustrator, and Canva. Beyond just publishing, I developed a coherent visual style that made our feed instantly recognizable.`,
+    image: esnImg,
       link: "https://www.instagram.com/esnulbbrussels/"
     }
   },

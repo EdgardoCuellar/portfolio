@@ -1,0 +1,57 @@
+Je m’appelle Edgardo Cuellar Sanchez. Recemment diplôme d’un Master en informatique à l’Universite Libre de Bruxelles (ULB) avec grande distinction, je suis passionne par l’informatique depuis l’age de 14 ans. J’ai construit et participe à de nombreux projets academiques et personnels, et j’ai co-fonde une startup (Rentizy) où j’ai exerce comme developpeur full-stack.
+
+Parcours & formation
+
+Master en Computer Science — Universite Libre de Bruxelles (promo 2024), mention grande distinction.
+J ai realise une annee à Montreal au Canada dans le cadre de mon echange universitaire.
+Mon master en informatique etait à specialite de data, j avais beaucoup de cours de data et aussi d intelligence artificelle.
+
+Bachelor en Computer Science — ULB.
+
+Experiences cles
+
+Rentizy (startup) — rôle : Full-Stack Developer / co-fondateur. Developpement du MVP de gestion immobilière avec une petite equipe (backend, frontend, base de donnees, CI/CD, deploiement).
+Rentizy is a property management MVP designed to simplify and automate the rental process for both property owners and tenants. From auto-generating rental contracts to handling maintenance reports and enabling property search for individuals and co-living arrangements, the platform centralizes everything.
+I co-founded the project with a partner who brought the initial idea and business expertise. I led the technical development using Django, TailwindCSS, JavaScript, SQL, and Azure, while we worked in agile methodology and with some UML schema with regular short call meetings. Later, we expanded the team to four by hiring a UI/UX designer and a backend developer.
+The project ran from November 2023 to January 2025, when I quit to focus on my long backpack trip. Django, TailwindCSS, JavaScript, SQL, Azure, Agile, UML
+
+ULB – projet / dev & recherche — developpement d’une plateforme de revente de syllabus (second-hand syllabus) : conception backend, base PostgreSQL, interface utilisateur, et mise en place de logs pour analyses futures.
+
+Projet academique – Collaborative Meal Planner — Java, architecture modulaire, travail en equipe Agile.
+
+Anime Recommender (Master project) — implementation d’un système de recommandation hybride (collaborative + content-based) avec Apache Spark / PySpark pour traiter des datasets volumineux ; prototype front pour la demonstration.
+
+Autres projets personnels sur mon GitHub : simulations, outils utilitaires, generateur visuel (ex. projets en Python, JS).
+
+Competences techniques
+
+Langages : Python, Java, JavaScript, C, C++, (notions de PHP).
+
+Web / frameworks : Django, React.js, Node.js, TailwindCSS.
+
+Bases de donnees : PostgreSQL (principal), SQL avance, NoSQL (MongoDB), Neo4J (graphes), SparkSQL.
+
+Big Data / Data processing : Spark, PySpark.
+
+Cloud / DevOps : Azure (deploiements), Docker, CI/CD (pipelines automatises), GitHub Actions.
+
+Outils & methodes : Git, UML, BPMN (notions), Agile / Scrum, tests unitaires et qualite de code.
+
+Systèmes : environnement Linux pour dev et scripting (bash, Python).
+
+Langues
+
+Français : C2 (usage quotidien)
+
+Espagnol : C1 (langue natale)
+
+Anglais : C1 (très bon, mauvais en orthographe, mais peux tenir de longues discussion en detaille)
+
+Neerlandais : A2 (debutant, souvenir de l ecole, en toute honnete je ne peux pas du tout tenir une discussion, mais je peux comprendre un texte, ou comprendre les idees d une discussion)
+
+Style de travail & interêts
+J’aime demarrer des projets « from scratch » et transformer des idees en produits concrets et utilisables. Je suis pragmatique, oriente produit et je travaille bien en equipe — j’aime faire le lien entre besoins utilisateurs et implementations techniques. Mes interêts techniques actuels : Devloppement logiciel, Software architect, data engineering, systèmes distribues, bonnes pratiques DevOps, et analyse fonctionnelle.
+
+Disponibilites & objectif professionnel
+Je suis à la recherche de postes en Belgique dans des rôles tels que Software engineer, Analyste fonctionnel, Software Engineer, DevOps / Cloud Engineer ou Data Engineer / Analyst. Je suis motive par des environnements qui combinent comprehension metier, qualite logicielle et deploiements reels en production.
+

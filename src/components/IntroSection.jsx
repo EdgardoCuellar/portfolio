@@ -44,10 +44,11 @@ export default function IntroSection() {
         Hello, I'm <span className="text-accent">Edgardo</span>
       </h1>
       <h2 className="text-2xl md:text-4xl font-semibold text-text mt-4 h-10">
-        A <span className="text-accent-secondary">{displayedText}</span>
+        A <span className="text-accent-secondary">Functional Analyst</span>
       </h2>
       <p className="text-gray-300 md:text-lg text-text max-w-2xl mt-8 text-center">
-        Just finished my Master's in Computer Science at ULB with high honors.
+        Currently working as a Functional Analyst at INAMI.
+        Graduated with a Master's in Computer Science from ULB (high honors).
         Been coding since I was 14, built all kinds of random stuff along the way. Here's some of my work, and a bit about me too :)
       </p>
 

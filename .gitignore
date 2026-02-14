@@ -27,3 +27,5 @@ dist-ssr
 *.sw?
 
 LLM_Bot_Me/corpus/*.txt
+
+usefull.txt

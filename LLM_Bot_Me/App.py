@@ -15,7 +15,7 @@ import unicodedata
 CHROMA_DIR = "./chroma_db"
 COL_NAME = "portfolio"
 EMBED_MODEL = "google/embeddinggemma-300m"
-MODEL_NAME = os.getenv("MODEL_NAME", "qwen/qwen3-4b-2507")
+MODEL_NAME = os.getenv("MODEL_NAME", "qwen3-4b-instruct-2507")
 LMSTUDIO_URL = os.getenv("LMSTUDIO_URL", "http://127.0.0.1:1234/v1")
 API_TOKEN = os.getenv("API_TOKEN", "JUDO1205")
 
@@ -57,8 +57,10 @@ SYSTEM_INSTRUCTIONS = (
     "1) Detect the user's language and answer in that language. If detection fails, default to French.\n"
     "2) Be concise: 2–5 sentences for factual answers.\n"
     "3) Do NOT mention, print or list any sources, filenames, or indices in the answer.\n"
-    "4) Use ONLY information present in the provided CONTEXT. If the answer cannot be found in the context, reply exactly:\n"
-    "\"I don't know based on my documents — please check the portfolio or ask me directly.\"\n"
+    "4) Use ONLY information present in the provided CONTEXT. If the answer cannot be found in the context,\n"
+    # " reply exactly:\n"
+    # "\"I don't know based on my documents — please check the portfolio or ask me directly.\"\n"
+    "try to infer the answer from the context provided.\n"
     "5) Do not invent facts or numbers. If asked for an opinion, prefix with 'Opinion:'.\n"
     "6) Keep generation temperature low (0.0–0.2) to avoid hallucinations.\n"
     "7) Speak in first person for personal facts (e.g., 'I built...','I used...').\n"

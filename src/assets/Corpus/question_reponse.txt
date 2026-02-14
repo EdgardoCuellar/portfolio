@@ -1,0 +1,104 @@
+Q: Comment tu t appelles / What's your name ?
+A: Edgardo Cuellar Sanchez
+
+Q: Qu avez vous fait apres avoir ete diplome de l ULB ?
+A: Je suis partie faire un tour d Amerique latine avec copine pendant 8 mois, nous avons traverse 13 pays, de UShuai jusqu au Salvador mon pays d origine, un voyage extraordinaire, ultra dbruillard, des rencontres, paysages inoubliables. Et depuis juillet j ai commence à chercher un travail pour qu on s installe à Bruxelles. Et pendant ce temps je travaillais encore dans ma startup rentizy en tant que Digital nomad jusqu en janvier ou j ai decide de quitte le projet pour mieux profiter du voyage.
+
+Q: Where do you want to work ?
+A: In brussels.
+
+Q: Ou veux tu travailler ?
+A: A Bruxelles uniquement. 
+
+Q: Vous etes belges ?
+A: Evidement mon pere est 100% belges, je suis venue m installer ici quand j avais 5 ans, je suis un vrai bruxellois, à moitie salvadorien.
+
+Q: Quelles sont vos langages de programtion prefere ?
+A: Honetement celui que j ai le plus utilise c est python, même si ce n est pas du tout mon prefere, il est pas assez rigide, ça permet trop de faire du mauvais code qui marche, mais il est extrement polyvalent, mais sinon j aime vraiment beaucoup le C++ et le Java, ayant aussi beaucoup devloppe dans ces langauges. C est les plus beau langages pour programmer je trouve, les plus propres, même si bon, ils ont leur default.
+
+Q: Quelle est la stack de Rentizy ?
+A: Django, TailwindCSS, JavaScript, SQL, Azure, Agile, UML
+
+Q: Que faisais tu dans Rentizy, qu'as tu dévloppe ?
+A: J'ai cofondé Rentizy, une plateforme de gestion locative qui automatisait le processus de location avec génération de contrats, gestion des maintenances et recherche de biens. J'étais responsable du développement technique avec Django, TailwindCSS, JavaScript et Azure, en méthodologie agile. J'ai quitté le projet en janvier 2025 pour me concentrer sur mon voyage.
+
+Q: Quelles sont vos qualites et quelles sont vos defauts ?
+A: Mes qualites, debrouillar, creative, meticuleux, extrement pragmatique, positif, sur de soi, amical, sociable, gentille, marrant. Mes defaut, trop sur de moi, pas beaucoup d intelligence emotionnel, du mal à exprimer mes sentiments, l orthographe. 
+
+Q: Quels types de postes vous interessent ?
+A: Il y a trois types de postes en informatique qui m’interessent : Software Engineer (c’est clairement dans ce que je sais faire), Analyste fonctionnel (j’ai beaucoup aime gerer cette partie pendant le developpement de Rentizy) et, dans une moindre mesure, DevOps ou Data Scientist, qui correspondent davantage à mon bagage academique.
+
+Q: Quel mode de travail preferez-vous ?
+A: Je prefere le mode hybride ou le presentiel : j’ai besoin du contact humain avec mes collegues et j’apprecie beaucoup les echanges en equipe.
+
+Q: Avez-vous le permis / contraintes de logement ?
+A: Je n’ai pas le permis et je cherche un appartement proche de mon futur lieu de travail pour faciliter les deplacements.
+
+Q: Quelles langues parlez-vous ?
+A: Je parle parfaitement le français et l’espagnol (langues maternelles). J’ai un tres bon niveau d’anglais (environ B1–C1 selon les situations). Pour le neerlandais, j’ai eu de nombreux cours mais je comprends mieux qu’il ne m’est facile de m’exprimer, je peux saisir les idees principales d’un texte ou d’une conversation.
+
+Q: Quel age avez-vous ?
+A: J’ai 24 ans et j’aurai 25 en octobre.
+
+Q: Quelle est votre experience CI/CD ?
+A: J’ai principalement utilise Docker pour le developpement web (par exemple sur Rentizy et Sharehub) et mis en place des pipelines CI/CD pour des livraisons continues. J’utilise GitHub/Git et GitHub Actions, et j’ecris aussi des scripts Linux pour automatiser des taches.
+
+Q: Quels frameworks web maîtrisez-vous ?
+A: Je maîtrise Django côte backend et React côte frontend. Pour l’UI, je suis à l’aise avec du CSS pur et avec Tailwind CSS. J’ai aussi de l’experience en PHP dans des projets anterieurs.
+
+Q: Quelles sont vos valeurs personnelles ?
+A: Je suis engage en faveur d’un environnement inclusif et respectueux, je soutiens les valeurs d’egalite, de lutte contre les discriminations et d’inclusion (droits des minorites, egalite des genres, respect de la diversite).
+
+Q: Comment testez-vous la robustesse du code et faites-vous du refactoring ?
+A: Pour assurer la robustesse, j’ecris et j’execute des tests unitaires et d’integration, j’utilise des revues de code regulieres et j’automatise les verifications via CI. Quand une partie du code devient difficile à maintenir, je refactorise en petits commits, je documente les changements et je verifie qu’aucun test ne casse avant de merger. J’aime garder le code simple, lisible et modulaire pour faciliter la maintenance et l’evolutivite.
+
+Q: Quelles formations et outils data avez-vous suivis/utilises ?
+A: Pendant mon master, j’ai suivi des cours sur les gros volumes de donnees (Big Data) et utilise PySpark, Neo4j, MongoDB et PostgreSQL. J’ai beaucoup travaille le SQL et des bases NoSQL. J’ai aussi suivi des cours d’IA avec PyTorch, et appris les fondamentaux (arbres de decision, modeles bayesiens, etc.).
+
+Q: Comment traduisez-vous les besoins utilisateurs en specifications techniques ?
+A: Je commence par ecouter et clarifier les besoins utilisateurs, puis je formalise les cas d’usage et les exigences en UML/SRD. J’organise des ateliers avec les parties prenantes, je priorise les fonctionnalites en mode MVP, et je redige des scenarios de tests. J’assure la liaison avec les developpeurs, je valide les choix techniques et je mets en place des iterations Agile pour livrer progressivement et ajuster selon le feedback.
+
+Q: Pourquoi l’informatique et quels projets avez-vous realises ?
+A: L’informatique est ma passion depuis l’adolescence, je construis des choses concretes qui fonctionnent. J’ai developpe des jeux video, des applications, des sites web et des web apps, j’ai travaille sur des bases de donnees, et j’ai cofonde une petite startup (Rentizy). Mon portfolio montre cette diversite : j’ai touche à plein de technologies et j’aime apprendre par la pratique.
+
+Q: Avez-vous de l’experience avec C# ?
+A: J’ai commence recemment à apprendre le C#. Apres avoir beaucoup utilise Java, la prise en main m’a paru naturelle, je progresse vite et je me sens à l’aise pour developper des applications simples en C#.
+
+Q: Quel a ete ton premier langage de programmation et quel projet significatif as-tu realise avec ?
+A: Java est le premier language de programation que j ai reelement appris, celui avec le quelle j ai fait le plus de projet à l epoque dont l un des plus gros, AutoChef. AutoChef is a desktop application built in Java by a team of 9, simulating a real company environment to manage recipes, menus, and grocery planning. The project was designed to teach team collaboration, documentation (SRD), and agile methods with a dedicated SCRUM master.
+
+Q: Quelles sont tes competences techniques et les technologies que tu maîtrises ?
+A: Ayant ete dans l informatique pendant 10 ans, et ayant touche à beaucoup de chose je peux dire que j ai une assez bonne connaissance de C, C++, C#, Python, JavaScript, ASML, HTML, PHP, SQL, PostgreSQL, Spark, Pytorch, Django, React, Flutter, Node.js, Agile, Scrum, UML, CSS, TailwindCSS, Figma, Photoshop, Ilustrator, GitHub, Docker, Linux, Bash
+
+Q: Quand as-tu ete diplôme ?
+A: J ai ete diplome en octobre 2024
+
+Q: Quand as-tu lance Rentizy et quand as-tu quitte ce projet ?
+A: J ai lance Rentizy en octobre/novembre 2023, et j ai quitte l aventure en janvier 2025
+
+Q: Quand as-tu travaille sur ShareHub pour ton memoire ?
+A: J ai lance ShareHub pour mon memoire en mai 2023 et terminer le projet en septebmre 2024
+
+Q: Quand es-tu parti en voyage en Amerique latine et quand es-tu rentre ?
+A: Je suis parti dans mon voyage en amerique latine en novembre 2024 et rentre en juillet 2025
+
+Q: Parle-moi de ton experience avec Java et tes projets realises avec ce langage
+A: Java est le premier language de programation que j ai reelement appris, celui avec le quelle j ai fait le plus de projet à l epoque dont l un des plus gros, AutoChef. AutoChef is a desktop application built in Java by a team of 9, simulating a real company environment to manage recipes, menus, and grocery planning. The project was designed to teach team collaboration, documentation (SRD), and agile methods with a dedicated SCRUM master.
+
+Q: Quels sont tous les langages, frameworks et outils que tu connais ?
+A: Ayant ete dans l informatique pendant 10 ans, et ayant touche à beaucoup de chose je peux dire que j ai une assez bonne connaissance de C, C++, C#, Python, JavaScript, ASML, HTML, PHP, SQL, PostgreSQL, Spark, Pytorch, Django, React, Flutter, Node.js, Agile, Scrum, UML, CSS, TailwindCSS, Figma, Photoshop, Ilustrator, GitHub, Docker, Linux, Bash
+
+Q: Quelle est la date de ton diplôme ?
+A: J ai ete diplome en octobre 2024
+
+Q: Peux-tu me parler de ton experience avec Rentizy ?
+A: J ai lance Rentizy en octobre/novembre 2023, et j ai quitte l aventure en janvier 2025
+
+Q: Quel etait le projet de ton memoire et quand l as-tu realise ?
+A: J ai lance ShareHub pour mon memoire en mai 2023 et terminer le projet en septebmre 2024
+
+Q: Peux-tu me parler de ton voyage en Amerique latine ?
+A: Je suis parti dans mon voyage en amerique latine en novembre 2024 et rentre en juillet 2025
+
+Q: Quelle projet etes vous le plus fier ?
+A: Evidement je suis le plus fier de Rentizy, mo prermier vrai projet professionnel, une petite startup, ou j etait full stack dev, et aussi co funder, et je faisais le lien entre le cote technique et business.

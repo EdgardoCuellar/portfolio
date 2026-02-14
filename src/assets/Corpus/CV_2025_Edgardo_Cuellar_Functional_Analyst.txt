@@ -1,0 +1,109 @@
+Edgardo Cuellar Sanchez
+Functional Analyst - Computer Scientist
+ edgardo-cuellar@hotmail.com
+
+ Brussels
+
+ https://edgardo-cuellar.tech
+
+ +32 456 22 55 74
+
+Graduated in Computer Science from ULB with high honors, I’ve been passionate about programming since
+I was 14. Through projects like Rentizy, a real estate management MVP I co-developed with three
+teammates, I learned to translate user needs into clear technical specifications. After my master’s, I spent
+eight months travelling across Latin America while continuing to coordinate development and refine
+requirements. I stepped away from the project during the trip to fully enjoy it.
+
+EDUCATION
+
+LANGUAGES
+
+Université libre de Bruxelles |
+
+French
+
+Brussels, Belgium, and Montreal, Canada
+
+C2 : Daily use
+
+Master in Computer Science
+
+Spanish
+
+From September 2022 to September 2024
+
+C1: Native language
+
+Université libre de Bruxelles | Brussels, Belgium
+
+English
+
+Bachelor in Computer Science
+
+C1 : Good working proficiency,
+academic background
+
+From September 2019 to September 2022
+
+Dutch
+A2 : Basic knowledge
+
+WORK EXPERIENCE
+Rentizy | Brussels, Belgium
+
+PROGRAMMING LANGUAGES
+
+Full-Stack Developer & Functional Analyst
+
+Programming
+
+From October 2023 to January 2025
+
+C, C++, Java, C#, Python, Linux
+Bash, ASM
+
+Co-founded a real estate startup (team of 4) and led full-stack
+development (Django, JS, Tailwindcss, SQL, Azure)
+Designed user flows, use cases and wireframes to guide
+development, did Agile development and regular short calls
+
+ULB - Faculté des Sciences | Brussels, Belgium
+Developer & Researcher
+From September 2023 to September 2024
+Designed, developed, and maintained a second-hand syllabus
+resale platform for ULB students
+Created visuals and promoted the platform
+Conducted user testing and iterations to optimize usability and
+adoption.
+
+Collaborative Meal Planning Software | Brussels, Belgium
+Java Developer From October 2021 to May 2022
+• Developed a collaborative meal planning and grocery management
+app in Java
+• Designed the system using UML and user stories, with an Agile
+development approach.
+
+ @EdgardoCuellar
+
+Web Development
+Django, React.js, Node, JavaScript,
+HTML, CSS, PHP
+Databases
+SQL, NoSQL, Neo4J, SparkSQL,
+Azure
+
+SKILLS
+Methods & Tools
+UML, Cucumber, Tests, Agile
+(Scrum), LaTeX, Git, FIgma
+Graphic Design
+Photoshop, Ilustrator, Canva
+
+INTERESTS
+IT project development, Visual
+design (posters, web interfaces),
+Backpacking trip, Cooking
+
+ @edgardo-cuellar-sanchez
+
+
