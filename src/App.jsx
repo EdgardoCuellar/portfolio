@@ -55,7 +55,7 @@ export default function App() {
 
         <IntroSection />
         {/* Vite exposes only variables prefixed with VITE_ in import.meta.env */}
-        <JobFairWidget apiKey={import.meta.env.VITE_OPEROUTER_API_KEY} />
+        <JobFairWidget apiKey={import.meta.env.VITE_OPEROUTER_API_KEY} /> 
         <ProjectsSection />
         <Skills />
         <LanguagesAndDegrees />
