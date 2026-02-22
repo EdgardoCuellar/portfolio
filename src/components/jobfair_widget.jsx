@@ -17,7 +17,11 @@ const fileDict = {
   "website_project_extracted.txt": { content: portfolioTxt, importance: 3 },
 };
 
-export default function JobFairWidget({ apiKey }) {
+// when using a proxy worker we don't need to receive an API key in the client
+// the worker supplies it on the server side. just supply the worker URL below.
+const PROXY_URL = "https://my-proxy.edgardocuellarportolio.workers.dev";
+
+export default function JobFairWidget() {
   const [q, setQ] = useState("");
   const [ans, setAns] = useState("");
   const [sources, setSources] = useState([]);
@@ -62,10 +66,9 @@ CONTEXT:
     setLoading(true);
 
     try {
-      const res = await fetch("https://openrouter.ai/api/v1/chat/completions", {
+      const res = await fetch(PROXY_URL, {
         method: "POST",
         headers: {
-          "Authorization": `Bearer ${apiKey}`,
           "Content-Type": "application/json",
           "HTTP-Referer": window.location.origin, // Optional, helps rankings
           "X-Title": "Job Fair Widget",           // Optional, identifies your app

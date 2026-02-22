@@ -54,8 +54,8 @@ export default function App() {
       <main className="max-w-5xl mx-auto px-4">
 
         <IntroSection />
-        {/* Vite exposes only variables prefixed with VITE_ in import.meta.env */}
-        <JobFairWidget apiKey={import.meta.env.VITE_OPEROUTER_API_KEY} /> 
+        {/* widget now talks to our proxy; no key needed client‑side */}
+        <JobFairWidget />
         <ProjectsSection />
         <Skills />
         <LanguagesAndDegrees />
