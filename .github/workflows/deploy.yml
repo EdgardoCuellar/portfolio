@@ -5,6 +5,10 @@ on:
     branches:
       - main  # Replace with your default branch name if different
 
+# ensure actions can push to gh-pages
+permissions:
+  contents: write
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
@@ -30,5 +34,6 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
+          # use the default GITHUB_TOKEN which has write access if permissions set above
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
