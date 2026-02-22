@@ -7,7 +7,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    // prefix build with a small shim to ensure globalThis.crypto.getRandomValues exists
+    "build": "node -e \"globalThis.crypto=globalThis.crypto||require('crypto').webcrypto\" && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
