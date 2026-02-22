@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
-import cvFunctional from "../assets/corpus/CV_2025_Edgardo_Cuellar_Functional_Analyst.txt";
-import cvSoftware from "../assets/corpus/CV_2025_Edgardo_Cuellar_Software_Engineer.txt";
-import informal from "../assets/corpus/informel.txt";
-import profileTxt from "../assets/corpus/profile.txt";
-import qaTxt from "../assets/corpus/question_reponse.txt";
-import portfolioTxt from "../assets/corpus/website_project_extracted.txt";
+// path is case-sensitive on Linux; folder name is 'Corpus' not 'corpus'
+import cvFunctional from "../assets/Corpus/CV_2025_Edgardo_Cuellar_Functional_Analyst.txt";
+import cvSoftware from "../assets/Corpus/CV_2025_Edgardo_Cuellar_Software_Engineer.txt";
+import informal from "../assets/Corpus/informel.txt";
+import profileTxt from "../assets/Corpus/profile.txt";
+import qaTxt from "../assets/Corpus/question_reponse.txt";
+import portfolioTxt from "../assets/Corpus/website_project_extracted.txt";
 
 // Make me a two value dict with file name as key, content one as value, and content two as importance (1-5) i'm going to fix it later
 const fileDict = {
