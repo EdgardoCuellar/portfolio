@@ -54,7 +54,7 @@ export default function App() {
       <main className="max-w-5xl mx-auto px-4">
 
         <IntroSection />
-        <JobFairWidget apiKey={process.env.REACT_APP_OPEROUTER_API_KEY} />
+        <JobFairWidget apiKey={import.meta.env.VITE_OPEROUTER_API_KEY} />
         <ProjectsSection />
         <Skills />
         <LanguagesAndDegrees />
