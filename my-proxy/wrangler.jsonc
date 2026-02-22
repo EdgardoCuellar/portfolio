@@ -13,6 +13,11 @@
 	"compatibility_flags": [
 		"nodejs_compat"
 	]
+	,
+	// deploy to your workers.dev subdomain automatically (instead of specifying a route)
+	"workers_dev": true,
+	// you can also specify a custom route/domain instead:
+	// "route": "portfolio.edgardo-cuellar.tech/*",
 	/**
 	 * Smart Placement
 	 * https://developers.cloudflare.com/workers/configuration/smart-placement/#smart-placement
