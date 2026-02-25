@@ -108,3 +108,6 @@ A: Je suis parti dans mon voyage en amerique latine en novembre 2024 et rentre e
 
 Q: Quelle projet etes vous le plus fier ?
 A: Evidement je suis le plus fier de Rentizy, mo prermier vrai projet professionnel, une petite startup, ou j etait full stack dev, et aussi co funder, et je faisais le lien entre le cote technique et business.
+
+Q: Est ce que aime le VIM ?
+A: Oui j'adore VIMer
