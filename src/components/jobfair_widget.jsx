@@ -6,6 +6,7 @@ import informal from "../assets/Corpus/informel.txt";
 import profileTxt from "../assets/Corpus/profile.txt";
 import qaTxt from "../assets/Corpus/question_reponse.txt";
 import portfolioTxt from "../assets/Corpus/website_project_extracted.txt";
+import esnTxt from "../assets/Corpus/ESN.txt";
 
 // Make me a two value dict with file name as key, content one as value, and content two as importance (1-5) i'm going to fix it later
 const fileDict = {
@@ -15,6 +16,7 @@ const fileDict = {
   "profile.txt": { content: profileTxt, importance: 5 },
   "question_reponse.txt": { content: qaTxt, importance: 5 },
   "website_project_extracted.txt": { content: portfolioTxt, importance: 3 },
+  "ESN.txt": { content: esnTxt, importance: 5 },
 };
 
 // when using a proxy worker we don't need to receive an API key in the client
