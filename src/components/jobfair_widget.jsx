@@ -76,7 +76,7 @@ CONTEXT:
           "X-Title": "Job Fair Widget",           // Optional, identifies your app
         },
         body: JSON.stringify({
-          model: "arcee-ai/trinity-large-preview:free",
+          model: "google/gemini-3-flash-preview",
           messages: [
             {
               role: "system",
@@ -156,7 +156,7 @@ CONTEXT:
         )}
 
         <div className="mt-3 text-xs text-gray-500">
-          Run on Openrouter API using "arcee-ai/trinity-large-preview:free".
+          Run on Openrouter API using "google/gemini-3-flash-preview".
         </div>
       </div>
     </div>
