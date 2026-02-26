@@ -76,7 +76,7 @@ CONTEXT:
           "X-Title": "Job Fair Widget",           // Optional, identifies your app
         },
         body: JSON.stringify({
-          model: "deepseek/deepseek-v3.2",
+          model: "arcee-ai/trinity-large-preview:free",
           messages: [
             {
               role: "system",
@@ -156,7 +156,7 @@ CONTEXT:
         )}
 
         <div className="mt-3 text-xs text-gray-500">
-          Run on Openrouter API using "deepseek/deepseek-v3.2".
+          Run on Openrouter API using "arcee-ai/trinity-large-preview:free".
         </div>
       </div>
     </div>
