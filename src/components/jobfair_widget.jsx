@@ -76,7 +76,7 @@ CONTEXT:
           "X-Title": "Job Fair Widget",           // Optional, identifies your app
         },
         body: JSON.stringify({
-          model: "qwen/qwen3-235b-a22b-thinking-2507",
+          model: "deepseek/deepseek-v3.2",
           messages: [
             {
               role: "system",
@@ -156,7 +156,7 @@ CONTEXT:
         )}
 
         <div className="mt-3 text-xs text-gray-500">
-          Run on Openrouter API using "qwen/qwen3-235b-a22b-thinking-2507".
+          Run on Openrouter API using "deepseek/deepseek-v3.2".
         </div>
       </div>
     </div>
